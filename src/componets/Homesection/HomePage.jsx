@@ -7,7 +7,7 @@ export const HomePage = () => {
   return (
     <>
     <div className="flex justify-between">
-        <div className="w-[100px]">
+        <div className="w-[50px]">
             <Sidebar/>
         </div>
         <div className="flex w-full">

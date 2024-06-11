@@ -70,8 +70,8 @@ import Camera from "../../assests/Camera.svg"
   ]
   return (
     <>
-    <div className=" w-full bg-[#191919] text-[#C7C7C7] h-full py-[10px]">
-        <div className="px-[60px] flex">
+    <div className=" w-full bg-[#191919] text-[#C7C7C7] h-full ">
+        <div className="px-[60px] flex py-[7px]">
           <div className="w-full flex">
             {navs.map((items,index)=>(
               <div className=" flex justify-between ">

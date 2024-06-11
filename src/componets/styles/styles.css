@@ -1,54 +1,129 @@
 
+.fonts_sora{
+  font-family: "Sora";
 
+}
+.cursor{
+  cursor: pointer;
+}
+.bgblue{
+  background: linear-gradient(137.68deg, #1F5DFD -3.4%, #9413E3 188.08%);
+}
   .navbar.open {
     display: flex;
     transition: 0.5s ease;
   
   }
   
-  
+  .hamburger {
+    display: block;
+    /* width: 100%; */
+    position: absolute;
+    top: 0;
+    padding-top: 5px;
+  }
 .navbar {
     width: 100%;
     /* height: 100%; */
     display: none;
     position: relative;
   }
+  /* fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 */
 .fibonar{
-    width: 100%;
+    /* width: 100%; */
     /* height: 100%; */
-    display: none;
-    position: absolute; 
+    /* display: none; */
+    position: absolute;
+    top: 100px;
+    left: 310px;  
+}
+.coordinates{
+  position: fixed;
+    top: 150px;
+    left: 47%;   
+}
+.spanner{
+  position: fixed;
+  top: 80px;
+  left: 1%; 
+}
+.spannered{
+  position: fixed;
+  top: 260px;
+  left: 1%;
+}
+.spider{
+  position: fixed;
+  top: 140px;
+  left: 1%;
+}
+.widths{
+  width: 313px;
+   /* height: 100%; */
+   
+   border: 1px 0px 0px 0px;
+   
+       color: aliceblue;
+       background: #1A1A1A;
+     padding-top: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-radius: 8px;
+      align-items: start;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 0px;
+      top: 0px;
+      left: 35px;
+       z-index: 1000;
+      position: absolute;
+   display: flex;
+   flex-direction: column;
 }
   .navbar ul {
-    width: 110px;
-    color: aliceblue;
-    height: 96px;
-    display: flex;
-    background: #000;
-    justify-content: center;
-    padding-left: 10px;
+    width: 296px;
+height: 246px;
+ 
+border-radius: 5px;
+border: 1px 0px 0px 0px;
+ 
+     color: aliceblue;
+     background: #1A1A1A;
+   padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     border-radius: 8px;
     align-items: start;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 0px;
     top: 0px;
-    left: 100px;
+    left: 35px;
      z-index: 1000;
     position: absolute;
- 
+ display: flex;
+ flex-direction: column;
   }
  
-  ul a li {
+ .navbar ul li {
+  display: flex;
+  width: 100%;
+  align-items: center; 
+  gap: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: space-between;
+  /* flex-direction: column; */
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
-    font-family: "SF Pro";
+    font-family: "Sora";
     text-align: center;
     list-style: none;
     cursor: pointer;
-    color: #000;
+    /* color: #000; */
   }
+  
  
  
   
@@ -57,7 +132,7 @@
     transition: 0.5s ease;
   
     height: 3px;
-    background-color: #333;
+    background-color: #fff;
     margin: 5px;
     transition: all 0.3s ease;
   }
