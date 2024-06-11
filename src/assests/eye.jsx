@@ -1,4 +1,13 @@
-<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+import React from 'react'
+
+export const Eye = () => {
+  return (
+    <>
+    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M12.9833 10.7037C12.9833 12.3537 11.65 13.687 10 13.687C8.35 13.687 7.01666 12.3537 7.01666 10.7037C7.01666 9.05367 8.35 7.72034 10 7.72034C11.65 7.72034 12.9833 9.05367 12.9833 10.7037Z" stroke="#EEEEEE" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M9.99999 17.5953C12.9417 17.5953 15.6833 15.862 17.5917 12.862C18.3417 11.687 18.3417 9.71198 17.5917 8.53698C15.6833 5.53698 12.9417 3.80365 9.99999 3.80365C7.05833 3.80365 4.31666 5.53698 2.40833 8.53698C1.65833 9.71198 1.65833 11.687 2.40833 12.862C4.31666 15.862 7.05833 17.5953 9.99999 17.5953Z" stroke="#EEEEEE" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
+
+    </>
+  )
+}

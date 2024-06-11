@@ -4,8 +4,7 @@ import close from "../../../assests/X.svg";
 
 export const Styles = () => {
      const [modalOpen2, setModalOpen2] = useState(false);
-     const [modalOpen, setModalOpen] = useState(false);
-
+ 
     const toggleMenus = () => {
       setModalOpen2(!modalOpen2);
     };
@@ -13,13 +12,8 @@ export const Styles = () => {
     const closeMenus = () => {
       setModalOpen2(false);
     }
-    const toggleModal = () => {
-      setModalOpen(!modalOpen);
-    };
-  
-    const closeModal = () => {
-      setModalOpen(false);
-    };
+   
+   
   
   return (
     <div className="">
@@ -36,15 +30,23 @@ export const Styles = () => {
             </div>
             <div className="flex justify-between gap-[20px]">
             <div className="flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
+            <div className="flex items-center justify-center ">
+      <input
+        type="checkbox"
+        className="checkbox-custom"
+      />
+    </div>
             <input type="text"  className='w-[87px] outline-none bg-transparent h-[20px] rounded-[3px] border border-[#2B2B2B]'/>
             <div className="w-[20px] h-[20px] bgblue border-[2px] border-[#1C1B1B]">
             </div>
             </div>
             <div className="flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
+            <div className="flex items-center justify-center ">
+      <input
+        type="checkbox"
+        className="checkbox-custom"
+      />
+    </div>
             <input type="text"  className='w-[87px] outline-none  bg-transparent h-[20px] rounded-[3px] border border-[#2B2B2B]'/>
             <div className="w-[20px] h-[20px] bg-[#A81FFD] border-[2px] border-[#1C1B1B]">
             </div>
@@ -52,76 +54,116 @@ export const Styles = () => {
             </div>
             <div className="flex justify-between gap-[20px]">
             <div className="flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
+           <div className="flex items-center justify-center ">
+      <input
+        type="checkbox"
+        className="checkbox-custom"
+      />
+    </div>
             <input type="text"  className='w-[87px] outline-none bg-transparent h-[20px] rounded-[3px] border border-[#2B2B2B]'/>
-            <div className="w-[20px] h-[20px] bgblue border-[2px] border-[#1C1B1B]">
+            <div className="w-[20px] h-[20px] bg-[#C70024] border-[2px] border-[#1C1B1B]">
             </div>
             </div>
             <div className="flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
+           <div className="flex items-center justify-center ">
+      <input
+        type="checkbox"
+        className="checkbox-custom"
+      />
+    </div>
             <input type="text"  className='w-[87px] outline-none  bg-transparent h-[20px] rounded-[3px] border border-[#2B2B2B]'/>
-            <div className="w-[20px] h-[20px] bg-[#A81FFD] border-[2px] border-[#1C1B1B]">
+            <div className="w-[20px] h-[20px] bg-[#1FFDD5] border-[2px] border-[#1C1B1B]">
             </div>
             </div>
             </div>
             <div className="flex justify-between gap-[20px]">
             <div className="flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
+           <div className="flex items-center justify-center ">
+      <input
+        type="checkbox"
+        className="checkbox-custom"
+      />
+    </div>
             <input type="text"  className='w-[87px] outline-none bg-transparent h-[20px] rounded-[3px] border border-[#2B2B2B]'/>
-            <div className="w-[20px] h-[20px] bgblue border-[2px] border-[#1C1B1B]">
+            <div className="w-[20px] h-[20px] bg-[#C78F00] border-[2px] border-[#1C1B1B]">
             </div>
             </div>
             <div className="flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
+           <div className="flex items-center justify-center ">
+      <input
+        type="checkbox"
+        className="checkbox-custom"
+      />
+    </div>
             <input type="text"  className='w-[87px] outline-none  bg-transparent h-[20px] rounded-[3px] border border-[#2B2B2B]'/>
-            <div className="w-[20px] h-[20px] bg-[#A81FFD] border-[2px] border-[#1C1B1B]">
+            <div className="w-[20px] h-[20px] bg-[#FD1FCC] border-[2px] border-[#1C1B1B]">
             </div>
             </div>
             </div>
             <div className="flex justify-between gap-[20px]">
             <div className="flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
+           <div className="flex items-center justify-center ">
+      <input
+        type="checkbox"
+        className="checkbox-custom"
+      />
+    </div>
             <input type="text"  className='w-[87px] outline-none bg-transparent h-[20px] rounded-[3px] border border-[#2B2B2B]'/>
-            <div className="w-[20px] h-[20px] bgblue border-[2px] border-[#1C1B1B]">
+            <div className="w-[20px] h-[20px] bg-[#C75300] border-[2px] border-[#1C1B1B]">
             </div>
             </div>
             <div className="flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
+           <div className="flex items-center justify-center ">
+      <input
+        type="checkbox"
+        className="checkbox-custom"
+      />
+    </div>
             <input type="text"  className='w-[87px] outline-none bg-transparent h-[20px] rounded-[3px] border border-[#2B2B2B]'/>
-            <div className="w-[20px] h-[20px] bg-[#A81FFD] border-[2px] border-[#1C1B1B]">
+            <div className="w-[20px] h-[20px] bg-[#1FA0FD] border-[2px] border-[#1C1B1B]">
             </div>
             </div>
             </div>
             {/* second batch */}
             <div className="flex gap-[16px] justify-between items-center">
             <div className="flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
+           <div className="flex items-center justify-center ">
+      <input
+        type="checkbox"
+        className="checkbox-custom"
+      />
+    </div>
             <span className='text-[#FFFFFFBF]'>Background</span>
             <input type="text"  className='w-[56px]  bg-transparent h-[20px] rounded-[3px] border border-[#2B2B2B]'/>
             </div>
             <div className="w-full flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
+           <div className="flex items-center justify-center ">
+      <input
+        type="checkbox"
+        className="checkbox-custom"
+      />
+    </div>
              <span className='text-[#FFFFFFBF]'>Show Price </span>
             </div>
             </div>
             {/* 3rd batch */}
             <div className="flex gap-[19px] justify-between items-center">
             <div className="w-full flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
+           <div className="flex items-center justify-center ">
+      <input
+        type="checkbox"
+        className="checkbox-custom"
+      />
+    </div>
             <span className='text-[#FFFFFFBF]'>Labels</span>
              </div>
             <div className=" w-full flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
+           <div className="flex items-center justify-center ">
+      <input
+        type="checkbox"
+        className="checkbox-custom"
+      />
+    </div>
              <span className='text-[#FFFFFFBF]'>Reverse </span>
             </div>
             </div>
@@ -178,75 +220,32 @@ export const Styles = () => {
               <span className='w-full font-[300] pb-[4px] text-[10px] leading-[12.6px] border-b-[2px] border-[#3E74FF] flex items-center justify-center '>Coordinates</span>
               <span className='w-full font-[300] text-[10px] leading-[12.6px]'>Visibility</span>
             </div>
-            <div className="flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[20px] h-[20px] bg-[#449F0C] border-[2px] border-[#2B2B2B]">
-            </div>
-            Background
-            </div>
+            
             <div className="flex justify-between gap-[20px]">
             <div className="flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
+           <span className='font-[300] text-[9px] leading-[11.34px] text-[#FFFFFFBF]'>#1 (Bar, Price)</span>
             <input type="text"  className='w-[87px] outline-none bg-transparent h-[20px] rounded-[3px] border border-[#2B2B2B]'/>
-            <div className="w-[20px] h-[20px] bgblue border-[2px] border-[#1C1B1B]">
-            </div>
+            
             </div>
             <div className="flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
+           
             <input type="text"  className='w-[87px] outline-none  bg-transparent h-[20px] rounded-[3px] border border-[#2B2B2B]'/>
-            <div className="w-[20px] h-[20px] bg-[#A81FFD] border-[2px] border-[#1C1B1B]">
-            </div>
+            
             </div>
             </div>
             <div className="flex justify-between gap-[20px]">
             <div className="flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
+           <span className='font-[300] text-[9px] leading-[11.34px] text-[#FFFFFFBF]'>#2 (Bar, Price)</span>
             <input type="text"  className='w-[87px] outline-none bg-transparent h-[20px] rounded-[3px] border border-[#2B2B2B]'/>
-            <div className="w-[20px] h-[20px] bgblue border-[2px] border-[#1C1B1B]">
-            </div>
+             
             </div>
             <div className="flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
+           
             <input type="text"  className='w-[87px] outline-none  bg-transparent h-[20px] rounded-[3px] border border-[#2B2B2B]'/>
-            <div className="w-[20px] h-[20px] bg-[#A81FFD] border-[2px] border-[#1C1B1B]">
+             
             </div>
             </div>
-            </div>
-            <div className="flex justify-between gap-[20px]">
-            <div className="flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
-            <input type="text"  className='w-[87px] outline-none bg-transparent h-[20px] rounded-[3px] border border-[#2B2B2B]'/>
-            <div className="w-[20px] h-[20px] bgblue border-[2px] border-[#1C1B1B]">
-            </div>
-            </div>
-            <div className="flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
-            <input type="text"  className='w-[87px] outline-none  bg-transparent h-[20px] rounded-[3px] border border-[#2B2B2B]'/>
-            <div className="w-[20px] h-[20px] bg-[#A81FFD] border-[2px] border-[#1C1B1B]">
-            </div>
-            </div>
-            </div>
-            <div className="flex justify-between gap-[20px]">
-            <div className="flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
-            <input type="text"  className='w-[87px] outline-none bg-transparent h-[20px] rounded-[3px] border border-[#2B2B2B]'/>
-            <div className="w-[20px] h-[20px] bgblue border-[2px] border-[#1C1B1B]">
-            </div>
-            </div>
-            <div className="flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
-            <div className="w-[16px] h-[16px] bg-[#2B2B2B] border-[2px] border-[#1C1B1B]">
-            </div>
-            <input type="text"  className='w-[87px] outline-none bg-transparent h-[20px] rounded-[3px] border border-[#2B2B2B]'/>
-            <div className="w-[20px] h-[20px] bg-[#A81FFD] border-[2px] border-[#1C1B1B]">
-            </div>
-            </div>
-            </div>
+            
            
             {/* last button */}
             <div className="flex gap-[5px] justify-end py-[15px]">

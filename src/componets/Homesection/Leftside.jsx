@@ -1,7 +1,11 @@
 import React from 'react'
+import ChartsBar from './charts/Chartbar'
 
 export const Leftside = () => {
   return (
-    <div>Leftside</div>
+    <>
+    ddkkdkjdj
+    {/* <ChartsBar/>  */}
+    </>
   )
 }

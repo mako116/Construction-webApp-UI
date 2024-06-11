@@ -1,97 +1,36 @@
 import React, { useState } from 'react';
 import cross from "../../assests/bx_cross.svg";
-import close from "../../assests/X.svg";
-import { SpannerSide } from "../../assests/inside/SpannerSide.jsx";
-import gear from "../../assests/inside/GearSix.svg";
-import LockOpen from "../../assests/inside/LockOpen.svg";
-import "../styles/styles.css";
-import { Styles } from './shortcuts/Styles';
-import { Spannered } from '../../assests/sidebar/Spannered';
-import { Hamba } from '../../assests/inside/hamba.jsx';
-import { Rectangle } from '../../assests/inside/Rectangle.jsx';
-import { Doublespanner } from '../../assests/sidebar/doublespanner.jsx';
+ import "../styles/styles.css";
+ import { Spannered } from '../../assests/sidebar/Spannered';
+ import { Doublespanner } from '../../assests/sidebar/doublespanner.jsx';
 import { Hamba2 } from '../../assests/sidebar/hamba2.jsx';
 import { Spider } from '../../assests/sidebar/spider.jsx';
+import { Eye } from '../../assests/eye.jsx';
+import { Unlock } from '../../assests/unlock.jsx';
+import { Tab } from '../../assests/sidebar/Tab.jsx';
+import { String } from '../../assests/sidebar/String.jsx';
+import { Hamburger } from '../../assests/sidebar/Hamburger.jsx';
+import { ListDashes } from '../../assests/sidebar/ListDashes.jsx';
+import { ClockCounterClockwise } from '../../assests/sidebar/ClockCounterClockwise.jsx';
+import { Notepad } from '../../assests/sidebar/Notepad.jsx';
 
 export const Sidebar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [activeModal, setActiveModal] = useState(null);
+   const [activeModal, setActiveModal] = useState(null);
 
   const handleModalToggle = (modalName) => {
     setActiveModal(activeModal === modalName ? null : modalName);
   };
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  
 
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
+  
 
   return (
-    <div className="w-full h-screen bg-[#191919] font-sora">
+    <div className="w-full flex flex-col justify-between h-screen bg-[#191919] font-sora">
       <ul className='px-[10px] flex flex-col gap-[10px]'>
         <li className='border-[#212121]'>
-          <div className="hamburger" onClick={toggleMenu}>
-            <div className={`line ${menuOpen ? 'open' : ''}`}></div>
-            <div className={`line ${menuOpen ? 'open' : ''}`}></div>
-            <div className={`line ${menuOpen ? 'open' : ''}`}></div>
-          </div>
-          <div className={`navbar ${menuOpen ? 'open' : ''}`}>
-            <ul>
-              <div className="flex justify-between w-full py-[10px]">
-                <h2 className='font-[400] text-[12px] leading-[15.12px]'>Manage drawing</h2>
-                <img className='cursor-pointer' onClick={closeMenu} src={close} alt="" />
-              </div>
-              <span className='text-[#FFFFFFB2] pt-[5px] font-[300] text-[12px] leading-[15.12px]'>EURUSD</span>
-              <li onClick={() => handleModalToggle('Fibonacci')}>
-                <div className="flex gap-[5px] items-center">
-                  <Hamba />
-                  <span className='font-[400] text-[12px] leading-[15.12px]'>Fibonacci</span>
-                </div>
-                <div className="flex gap-[10px] items-center">
-                  <img src={gear} alt="" />
-                  <img src={LockOpen} alt="" />
-                  <img src={close} alt="" />
-                </div>
-              </li>
-              <li onClick={() => handleModalToggle('Trending')}>
-                <div className="flex gap-[5px] items-center">
-                  <SpannerSide />
-                  <span className='font-[400] text-[12px] leading-[15.12px]'>Trending</span>
-                </div>
-                <div className="flex gap-[10px]">
-                  <img src={gear} alt="" />
-                  <img src={LockOpen} alt="" />
-                  <img src={close} alt="" />
-                </div>
-              </li>
-              <li onClick={() => handleModalToggle('Rectangle')}>
-                <div className="flex gap-[5px] items-center">
-                  <Rectangle />
-                  <span className='font-[400] text-[12px] leading-[15.12px]'>Rectangle</span>
-                </div>
-                <div className="flex gap-[10px]">
-                  <img src={gear} alt="" />
-                  <img src={LockOpen} alt="" />
-                  <img src={close} alt="" />
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          {activeModal === 'Fibonacci' && (
-            <div className="fibonar inset-0">
-              <div className="widths p-4 rounded-lg">
-                <div className="flex justify-between w-full py-[10px]">
-                  <h2 className='font-[400] text-[12px] leading-[15.12px]'>Fibonacci</h2>
-                  <img className='cursor-pointer' onClick={() => setActiveModal(null)} src={close} alt="" />
-                </div>
-                <Styles onClick={() => handleModalToggle('Fibonacci')} />
-              </div>
-            </div>
-          )}
+         <Hamburger/>
+          
         </li>
         <li className='py-[5px] border-t border-b border-[#212121]'>
           <img src={cross} alt="" />
@@ -119,9 +58,29 @@ export const Sidebar = () => {
         </li>
         <li className='border-b py-[5px] border-[#212121]'>
           <Hamba2 />
-          
         </li>
+        <li className='border-b py-[5px] border-[#212121]'>
+          <Eye />
+        </li>
+        <li className='border-b py-[5px] border-[#212121]'>
+          <Unlock />
+        </li>
+        <li className='border-b py-[5px] border-[#212121]'>
+          <Tab />
+        </li>
+        <li className='border-b py-[5px] border-[#212121]'>
+          <String />
+        </li>
+        
       </ul>
+      <div className="">
+        <ul className='py-[20px] px-[10px] flex flex-col gap-[10px]'>
+          <li><ListDashes/></li>
+          <li><ClockCounterClockwise/></li>
+          <li><Notepad/></li>
+        </ul>
+      </div>
     </div>
+
   );
 };
