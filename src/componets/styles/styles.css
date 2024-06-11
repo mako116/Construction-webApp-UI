@@ -1,0 +1,67 @@
+
+
+  .navbar.open {
+    display: flex;
+    transition: 0.5s ease;
+  
+  }
+  
+  
+.navbar {
+    width: 100%;
+    /* height: 100%; */
+    display: none;
+    position: relative;
+  }
+.fibonar{
+    width: 100%;
+    /* height: 100%; */
+    display: none;
+    position: absolute; 
+}
+  .navbar ul {
+    width: 110px;
+    color: aliceblue;
+    height: 96px;
+    display: flex;
+    background: #000;
+    justify-content: center;
+    padding-left: 10px;
+    border-radius: 8px;
+    align-items: start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0px;
+    top: 0px;
+    left: 100px;
+     z-index: 1000;
+    position: absolute;
+ 
+  }
+ 
+  ul a li {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "SF Pro";
+    text-align: center;
+    list-style: none;
+    cursor: pointer;
+    color: #000;
+  }
+ 
+ 
+  
+  .line {
+    width: 25px;
+    transition: 0.5s ease;
+  
+    height: 3px;
+    background-color: #333;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  
+ 
+ 
