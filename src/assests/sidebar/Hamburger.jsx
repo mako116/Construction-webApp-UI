@@ -15,6 +15,7 @@ import { Trajnslate } from '../hamburgar/Trajnslate.jsx';
 import { Envelope } from '../hamburgar/Envelope.jsx';
 import { Question } from '../hamburgar/Question.jsx';
  import { Rectangle } from '../inside/Rectangle';
+import { Searchnormal } from '../search-normal.jsx';
 
 export const Hamburger = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -44,6 +45,24 @@ export const Hamburger = () => {
        { icons: <Rectangle />, name: 'Show OHLC' },
     ];
    
+    const spannerRowed = [
+      { icons: <Candle />, name: 'Green & Red' },
+      { icons: <Candle />, name: 'Blue & Red' },
+      { icons: <Candle />, name: 'Black& white' },
+      { icons: <Candle />, name: 'Neutral' },
+      
+    ];
+    const Languages = [
+      {name: 'English' },
+      {name: 'Arabic' },
+      {name: 'Chinese' },
+      {name: 'Francais' },
+      {name: 'Dutch' },
+      {name: 'Czech' },
+      {name: 'German' },
+      {name: 'Hugarian' },
+      
+    ];
     return (
     <>
        <div className="hamburger" onClick={toggleMenu}>
@@ -90,7 +109,7 @@ export const Hamburger = () => {
                      </div>
                       <Arrow/>
                     </div>
-                    <div className="flex w-full justify-between items-center">
+                    <div Lang onClick={() => handleModalToggle('color')} className="flex w-full justify-between items-center">
                      <div className="flex gap-[5px]">
                      <Colorstemps/>
                      <span>Color templates</span>
@@ -111,7 +130,7 @@ export const Hamburger = () => {
                      </div>
                       <Arrow/>
                     </div>
-                    <div className="flex w-full justify-between items-center">
+                    <div Lang onClick={() => handleModalToggle('Lang')} className="flex w-full justify-between items-center">
                      <div className="flex gap-[5px]">
                      <Trajnslate/>
                      <span>Language</span>
@@ -175,7 +194,33 @@ export const Hamburger = () => {
               </div>
               <div onClick={() => handleModalToggle('color')} >
               <ul className='w-full'>
-              {spannerRows.map((items, index) => (
+              {spannerRowed.map((items, index) => (
+                <div key={index} className="flex  border-[#212121] py-[10px] flex-col w-full">
+                  <li  className=' flex gap-[5px] items-center'>
+                    <span>{items.icons}</span>
+                    <span className='font-sora font-[300] text-[12px] leading-[15.12px] text-[#FFFFFFE5]'>{items.name}</span>
+                  </li>
+                  
+                </div>
+              ))}
+            </ul>
+              </div>
+            </div>
+          </div>
+        )} 
+        {activeModal === 'Lang' && (
+          <div className="colors inset-0">
+            <div className="widthed p-4 rounded-lg">
+              <div className="flex justify-between w-full ">
+                <img className='cursor-pointer' onClick={() => setActiveModal(null)} alt="" />
+              </div>
+              <div onClick={() => handleModalToggle('color')} >
+              <ul className='w-full'>
+              <div className="flex w-full mb-[10px] pl-[5px] gap-[5px] h-[38px] items-center rounded-[5px] bg-[#201F1F]">
+          <Searchnormal/>      
+          <input type="search" placeholder='Search Symbol' className='w-full outline-none bg-transparent rounded-[5px] border-none text-[#9A9999] leading-[15.12px] text-[12px] font-[400] '/>
+        </div>
+              {Languages.map((items, index) => (
                 <div key={index} className="flex  border-[#212121] py-[10px] flex-col w-full">
                   <li  className=' flex gap-[5px] items-center'>
                     <span>{items.icons}</span>
