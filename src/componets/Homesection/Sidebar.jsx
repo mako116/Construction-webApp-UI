@@ -26,7 +26,9 @@ export const Sidebar = () => {
   
 
   return (
-    <div className="w-full flex flex-col justify-between h-screen bg-[#191919] font-sora">
+    
+    <div className="  flex flex-col gap-[30px] justify-between bg-[#191919] font-sora">
+      <div className="flex flex-col w-full gap-[50px] h-screen">
       <ul className='px-[10px] flex flex-col gap-[10px]'>
         <li className='border-[#212121]'>
          <Hamburger/>
@@ -73,13 +75,16 @@ export const Sidebar = () => {
         </li>
         
       </ul>
-      <div className="">
+     <div className="w-full h-full flex items-end">
+     <div className=" w-full flex">
         <ul className='py-[20px] px-[10px] flex flex-col gap-[10px]'>
           <li><ListDashes/></li>
           <li><ClockCounterClockwise/></li>
           <li><Notepad/></li>
         </ul>
       </div>
+     </div>
+     </div>
     </div>
 
   );

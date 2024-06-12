@@ -6,7 +6,15 @@ import gear from "../../assests/inside/GearSix.svg";
 import LockOpen from "../../assests/inside/LockOpen.svg";
 import { Logo } from '../hamburgar/logo.jsx';
 import { Arrow } from './arrow.jsx';
-
+import { Candle } from '../candle.jsx';
+import { Darktheme } from '../hamburgar/darktheme.jsx';
+import { Colorstemps } from '../hamburgar/colorstemps.jsx';
+import { BS } from '../hamburgar/BS.jsx';
+import { Calendar } from '../hamburgar/Calendar.jsx';
+import { Trajnslate } from '../hamburgar/Trajnslate.jsx';
+import { Envelope } from '../hamburgar/Envelope.jsx';
+import { Question } from '../hamburgar/Question.jsx';
+ import { Rectangle } from '../inside/Rectangle';
 
 export const Hamburger = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -24,6 +32,18 @@ export const Hamburger = () => {
       setMenuOpen(false);
     };
 
+    const spannerRows = [
+      { icons: <Hamba />, name: 'Grid' },
+      { icons: <SpannerSide />, name: 'Trade orders' },
+      { icons: <SpannerSide />, name: 'Trade positions' },
+      { icons: <SpannerSide />, name: 'Trade history' },
+      { icons: <SpannerSide />, name: 'SL/TP Level' },
+      { icons: <SpannerSide />, name: 'Ask price' },
+      { icons: <SpannerSide />, name: 'Cost Controls' },
+      { icons: <SpannerSide />, name: 'Trade notification' },
+       { icons: <Rectangle />, name: 'Show OHLC' },
+    ];
+   
     return (
     <>
        <div className="hamburger" onClick={toggleMenu}>
@@ -40,31 +60,135 @@ export const Hamburger = () => {
                 Demo
               </button>
               </div>
-              <li onClick={() => handleModalToggle('Fibonacci')}>
-                 <div className="w-full pt-[15px]">
-                    <div className="flex w-full justify-between items-center">
+              <li>
+                 <div className="w-full flex flex-col gap-[17px] font-[300] text-[12px] leading-[15.12px] text-[#FFFFFFCC] h-full pt-[15px]">
+                    <div className="pb-[5px] flex w-full justify-between items-center">
                      <div className="flex gap-[5px]">
                      <Logo/>
                      <span>Trading accounts</span>
                      </div>
                       <Arrow/>
                     </div>
+                    <div  onClick={() => handleModalToggle('Fibonacci')} className="flex w-full justify-between items-center">
+                     <div className="flex gap-[5px]">
+                     <Candle/>
+                     <span>Chart settings</span>
+                     </div>
+                      <Arrow/>
+                    </div>
+                    <div className="flex w-full justify-between items-center">
+                     <div className="flex gap-[5px]">
+                     <Candle/>
+                     <span>One-click trading</span>
+                     </div>
+                      <Arrow/>
+                    </div>
+                    <div className="flex w-full justify-between items-center">
+                     <div className="flex gap-[5px]">
+                     <Darktheme/>
+                     <span>Dark theme</span>
+                     </div>
+                      <Arrow/>
+                    </div>
+                    <div className="flex w-full justify-between items-center">
+                     <div className="flex gap-[5px]">
+                     <Colorstemps/>
+                     <span>Color templates</span>
+                     </div>
+                      <Arrow/>
+                    </div>
+                    <div className="flex w-full justify-between items-center">
+                     <div className="flex gap-[5px]">
+                     <BS/>
+                     <span>BS DEFI web</span>
+                     </div>
+                      <Arrow/>
+                    </div>
+                    <div className="flex w-full justify-between items-center">
+                     <div className="flex gap-[5px]">
+                     <Calendar/>
+                     <span>Economic calendar</span>
+                     </div>
+                      <Arrow/>
+                    </div>
+                    <div className="flex w-full justify-between items-center">
+                     <div className="flex gap-[5px]">
+                     <Trajnslate/>
+                     <span>Language</span>
+                     </div>
+                      <Arrow/>
+                    </div>
+                    <div className="flex w-full justify-between items-center">
+                     <div className="flex gap-[5px]">
+                     <Candle/>
+                     <span>Shortcuts</span>
+                     </div>
+                      <Arrow/>
+                    </div>
+                    <div className="flex w-full justify-between items-center">
+                     <div className="flex gap-[5px]">
+                     <Envelope/>
+                     <span>Contact us</span>
+                     </div>
+                      <Arrow/>
+                    </div>
+                    <div className="flex w-full justify-between items-center">
+                     <div className="flex gap-[5px]">
+                     <Question/>
+                     <span>Contact us</span>
+                     </div>
+                      <Arrow/>
+                    </div>
                  </div>
               </li>
-              <li onClick={() => handleModalToggle('Trending')}>
-                <div className="flex gap-[5px] items-center">
-                  <SpannerSide />
-                  <span className='font-[400] text-[12px] leading-[15.12px]'>Trending</span>
-                </div>
-                <div className="flex gap-[10px]">
-                  <img src={gear} alt="" />
-                  <img src={LockOpen} alt="" />
-                  <img src={close} alt="" />
-                </div>
-              </li>
+            
               
             </ul>
-          </div>  
+          </div> 
+          {activeModal === 'Fibonacci' && (
+          <div className="fibonar inset-0">
+            <div className="widthed p-4 rounded-lg">
+              <div className="flex justify-between w-full ">
+                <img className='cursor-pointer' onClick={() => setActiveModal(null)} alt="" />
+              </div>
+              <div onClick={() => handleModalToggle('Fibonacci')} >
+              <ul className='w-full'>
+              {spannerRows.map((items, index) => (
+                <div key={index} className="flex  border-[#212121] py-[10px] flex-col w-full">
+                  <li  className=' flex gap-[5px] items-center'>
+                    <span>{items.icons}</span>
+                    <span className='font-sora font-[300] text-[12px] leading-[15.12px] text-[#FFFFFFE5]'>{items.name}</span>
+                  </li>
+                  
+                </div>
+              ))}
+            </ul>
+              </div>
+            </div>
+          </div>
+        )} 
+        {activeModal === 'color' && (
+          <div className="colors inset-0">
+            <div className="widthed p-4 rounded-lg">
+              <div className="flex justify-between w-full ">
+                <img className='cursor-pointer' onClick={() => setActiveModal(null)} alt="" />
+              </div>
+              <div onClick={() => handleModalToggle('color')} >
+              <ul className='w-full'>
+              {spannerRows.map((items, index) => (
+                <div key={index} className="flex  border-[#212121] py-[10px] flex-col w-full">
+                  <li  className=' flex gap-[5px] items-center'>
+                    <span>{items.icons}</span>
+                    <span className='font-sora font-[300] text-[12px] leading-[15.12px] text-[#FFFFFFE5]'>{items.name}</span>
+                  </li>
+                  
+                </div>
+              ))}
+            </ul>
+              </div>
+            </div>
+          </div>
+        )} 
     </>
   )
 }
