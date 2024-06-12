@@ -71,7 +71,7 @@ const Charts = () => {
   if (chartData.length === 0) return null;
 
   const chartHeight = 190;
-  const chartWidth = 800;
+  const chartWidth = 900;
 
   const wavePath = (strokeWidth) => {
     const points = [];
@@ -86,21 +86,25 @@ const Charts = () => {
   return (
     <div className='flex w-full h-full'>
    
-    <div className="w-full h-full items-center  flex justify-center">
-       <svg className="chart" viewBox={`0 0  ${chartWidth} ${chartHeight}`} style={{overflow: 'visible'}}>
-        {/* Shades */}
-        <path d={wavePath(3)} fill="none" stroke="#f0f0f0" strokeWidth="1" />
+   <div className="w-full h-full items-center flex justify-center">
+  <svg className="chart" viewBox={`0 0 ${chartWidth} ${chartHeight}`} style={{ overflow: 'visible' }}>
+    {/* Shades */}
+    <path d={wavePath(3)} fill="none" stroke="#f0f0f0" strokeWidth="2" />
 
-        {/* Main Line */}
-        <path d={wavePath(1)} fill="none" stroke="url(#grad)" strokeWidth="1" />
+    {/* Main Line */}
+    <path d={wavePath(1)} fill="none" stroke="url(#grad)" strokeWidth="5" filter="url(#blur)" />
 
-        {/* Gradient */}
-        <linearGradient id="grad">
-          <stop offset="0%" stopColor="green" />
-          <stop offset="100%" stopColor="red" />
-        </linearGradient>
-      </svg>
-    </div>
+    {/* Gradient */}
+    <linearGradient id="grad">
+      <stop offset="0%" stopColor="green" />
+      <stop offset="100%" stopColor="red" />
+    </linearGradient>
+    {/* Blur filter */}
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+    </filter>
+  </svg>
+</div>
     <div className="text-[#fff] h-full justify-between flex flex-col py-[10px] text-[#978E8E] border-l-[2px] border-r-[2px] border-[#212121] px-[10px]">
         {numbers.map((items,index)=>(
             <div key={index} className="flex  gap-[20px] flex-col w-full font-[300] text-[12px] leading-[15.12px]  w-full  over-flow-hidden">

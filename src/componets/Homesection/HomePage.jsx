@@ -1,9 +1,6 @@
 import React from 'react'
 import { Sidebar } from './Sidebar'
-import { Leftside } from './Leftside'
-import { Rightside } from './Rightside'
-import ChartsBar from './charts/Chartbar'
-import { Footer } from '../Footer/Footer'
+
 import { Homesection } from './Homesection'
 
 export const HomePage = () => {
