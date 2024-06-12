@@ -37,7 +37,7 @@ export const Rightside = () => {
   return (
     <>
     <div className=" font-sora bg-[#1A1A1A]">
-      <div className="w-full px-[10px]">
+      <div className="w-full h-screen px-[10px]">
       <div className="flex w-full mb-[10px] pl-[5px] gap-[5px] h-[38px] items-center rounded-[5px] bg-[#201F1F]">
           <Searchnormal/>      
           <input type="search" placeholder='Search Symbol' className='w-full outline-none bg-transparent rounded-[5px] border-none text-[#9A9999] leading-[15.12px] text-[12px] font-[400] '/>

@@ -49,7 +49,7 @@ export const Footer = () => {
             </div>
            
         </div>
-        <div className=" pt-[20px]  flex-col flex items-center justify-center text-center">
+        <div className="h-[30vh] pt-[20px]  flex-col flex items-center justify-center text-center">
             <div className=" flex flex-col items-center gap-[5px] pb-[12px]">
                  <Fill/>
                  <h4 className=' text-[#B4B4B4] font-[400] text-[13px] '>You don't have any positions</h4>

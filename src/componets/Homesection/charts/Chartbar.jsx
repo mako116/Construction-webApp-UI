@@ -1,51 +1,89 @@
-import { ChartSection } from "./Chartpage";
-import React, { Component } from 'react'
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { HistoricalChart } from "../../api";
+import { Line } from "react-chartjs-2";
 
-export default class ChartsBar extends Component {
-    constructor() {
-      super();
-      this.state = {
-        Id: "bitcoin",
-        Data: {}
-      }
+const CoinInfo = ({ coin, currency }) => {
+  const [historicData, setHistoricData] = useState([]);
+  const [days, setDays] = useState(1);
+
+  const fetchHistoricData = async () => {
+    try {
+      const { data } = await axios.get(HistoricalChart(coin.id, days, currency));
+      setHistoricData(data.prices);
+    } catch (error) {
+      console.error("Error fetching historical data", error);
     }
-    fetchData = async () => {
-      let data = await fetch('https://api.coingecko.com/api/v3/coins/'+ this.state.Id)
-      let JsonData = await data.json()
-      this.setState({ Id: this.state.Id, Data: JsonData })
+  };
+
+  useEffect(() => {
+    if (coin) {
+      fetchHistoricData();
     }
-  
-    handleSubmit = async (event)=>{
-      console.log(event.target.value)
-      await this.setState({Id: event.target.value, Data:this.state.Data})
-      this.fetchData()
-    }
-  
-    componentDidMount() {
-      this.fetchData()
-      this.interval = setInterval(() => this.fetchData(), 2000);
-  
-    }
-    componentWillUnmount() {
-      clearInterval(this.interval);
-    }
-  
-    render() {
-      return (
-        <div>
-          {/* <Header handle_Submit = {this.handleSubmit} />
-          <CardSection coinName={this.state.Data.name} currentPrice={this.state.Data.market_data ? this.state.Data.market_data.current_price["usd"] : ""}
-            mCap24={this.state.Data.market_data ? this.state.Data.market_data.market_cap_change_percentage_24h : ""}
-            ath={this.state.Data.market_data ? this.state.Data.market_data.ath.usd : ""} atl={this.state.Data.market_data ? this.state.Data.market_data.ath.usd : ""}
-            sentiment={this.state.Data.sentiment_votes_up_percentage} high24={this.state.Data.market_data ? this.state.Data.market_data.high_24h["usd"] : ""}
-            low24={this.state.Data.market_data ? this.state.Data.market_data.low_24h["usd"] : ""} /> */}
-            <ChartSection Id={this.state.Id} priceChange24={this.state.Data.market_data ? this.state.Data.market_data.price_change_24h_in_currency.usd : ""} 
-          MarketCap={this.state.Data.market_data ? this.state.Data.market_data.market_cap.usd  : ""}
-          TotVol={this.state.Data.market_data ? this.state.Data.market_data.total_volume.usd  : ""}
-          Circulating= {this.state.Data.market_data ? this.state.Data.market_data["circulating_supply"] : ""}
-          twitterF = {this.state.Data.community_data ? this.state.Data.community_data.twitter_followers : ""}
+  }, [coin, days, currency]);
+
+  // Prepare data for area chart
+  const chartData = {
+    labels: historicData.map((point) => {
+      let date = new Date(point[0]);
+      return days === 1 ? date.toLocaleTimeString() : date.toLocaleDateString();
+    }),
+    datasets: [
+      {
+        data: historicData.map((point) => point[1]),
+        label: `Price (Past ${days} Days) in ${currency}`,
+        backgroundColor: "rgba(238, 188, 29, 0.2)", // Background color for area
+        borderColor: "transparent", // Transparent border to hide lines
+      },
+    ],
+  };
+
+  return (
+    <div className="w-[300px]">
+      {historicData.length > 0 && (
+        <>
+          <Line
+            data={{
+              labels: historicData.map((point) => {
+                let date = new Date(point[0]);
+                let time =
+                  date.getHours() > 12
+                    ? `${date.getHours() - 12}:${date.getMinutes()} PM`
+                    : `${date.getHours()}:${date.getMinutes()} AM`;
+                return days === 1 ? time : date.toLocaleDateString();
+              }),
+              datasets: [
+                {
+                  data: historicData.map((point) => point[1]),
+                  label: `Price (Past ${days} Days) in ${currency}`,
+                  borderColor: "#EEBC1D",
+                },
+              ],
+            }}
+            options={{
+              elements: {
+                point: {
+                  radius: 1,
+                },
+              },
+            }}
           />
-        </div>
-      )
-    }
-  }
+          <div
+            style={{
+              display: "flex",
+              marginTop: 20,
+              justifyContent: "space-around",
+              width: "100%",
+            }}
+          >
+            {/* Add buttons or other components here */}
+          </div>
+        </>
+      )}
+      {/* Render area chart */}
+      {historicData.length > 0 && <Line data={chartData} />}
+    </div>
+  );
+};
+
+export default CoinInfo;
