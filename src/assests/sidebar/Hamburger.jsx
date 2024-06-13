@@ -21,7 +21,46 @@ import { Arrow_left } from '../mobile_footer/Arrow_left.jsx';
 export const Hamburger = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [activeModal, setActiveModal] = useState(null);
-  
+    const [isToggled, setIsToggled] = useState(false);
+
+    const [isToggledd, setIsToggledd] = useState(false);
+    const [isToggleds, setIsToggleds] = useState(false);
+    const [isToggledl, setIsToggledl] = useState(false);
+    const [isToggledin, setIsToggledin] = useState(false);
+    const [isToggleder, setIsToggleder] = useState(false);
+    const [isToggle, setIsToggle] = useState(false);
+    const [isToggl, setIsToggl] = useState(false);
+    const [isTogg, setIsTogg] = useState(false);
+
+    const handleToggled = () => {
+      setIsToggledd(!isToggledd);
+    };
+    const handleToggles = () => {
+      setIsToggleds(!isToggleds);
+    };
+    const handleTogglel = () => {
+      setIsToggledl(!isToggledl);
+    };
+    const handleToggledin = () => {
+      setIsToggledin(!isToggledin);
+    };
+    const handleToggler = () => {
+      setIsToggleder(!isToggleder);
+    };
+     const handleISToggl = () => {
+      setIsToggl(!isToggl);
+    };
+    const handleISTogg = () => {
+      setIsTogg(!isTogg);
+    };
+    const handleISToggle = () => {
+      setIsToggle(!isToggle);
+    };
+    const handleToggle = () => {
+      setIsToggled(!isToggled);
+    };
+
+
     const handleModalToggle = (modalName) => {
       setActiveModal(activeModal === modalName ? null : modalName);
     };
@@ -33,6 +72,7 @@ export const Hamburger = () => {
     const closeMenu = () => {
       setMenuOpen(false);
     };
+    
 
     const spannerRows = [
       { icons: <Hamba />, name: 'Grid' },
@@ -93,7 +133,7 @@ export const Hamburger = () => {
                      </div>
                       <Arrow/>
                     </div>
-                    <div  onClick={() => handleModalToggle('Fibonacci')} className="flex w-full justify-between items-center">
+                    <div  onClick={() => handleModalToggle('Fibonacci')} className="flex w-full justify-between items-center ">
                      <div className="flex gap-[5px]">
                      <Candle/>
                      <span>Chart settings</span>
@@ -159,7 +199,7 @@ export const Hamburger = () => {
                     <div className="flex w-full justify-between items-center">
                      <div className="flex gap-[5px]">
                      <Question/>
-                     <span>Contact us</span>
+                     <span>About us</span>
                      </div>
                       <Arrow/>
                     </div>
@@ -174,30 +214,185 @@ export const Hamburger = () => {
           <div className="fibonar inset-0">
             <div className="widthed p-4 rounded-lg">
               <div className="flex justify-between w-full ">
+              <div  className="flex flex-row py-[20px] display_nonemobiles  w-full items-center cursor-pointer text-[#fff] display_nonemobiles">
+             <div className=""  onClick={() => setActiveModal(null)}> 
+              <Arrow_left />
+             </div>
+             <h4  className='chartins'>Chart settings</h4>
+
+            </div>
                 <img className='cursor-pointer' onClick={() => setActiveModal(null)} alt="" />
+              
               </div>
-              <div onClick={() => handleModalToggle('Fibonacci')} >
-              <ul className='w-full '>
-              {spannerRows.map((items, index) => (
-                <div key={index} className="flex  border-[#212121] py-[10px] flex-col w-full">
-                  <li  className=' flex gap-[5px] items-center'>
-                    <span>{items.icons}</span>
-                    <span className='font-sora font-[300] text-[12px] leading-[15.12px] text-[#FFFFFFE5]'>{items.name}</span>
+              <div className='w-full' >
+              <ul className='w-full px-[10px]'>
+                 <div className="   flex items-center justify-between ">
+                 <div className="flex  border-[#212121] py-[10px] flex-col w-full">
+                 <li  className=' flex gap-[5px] items-center'>
+                    <span><Hamba /></span>
+                    <span className='font-sora font-[300] text-[12px] leading-[15.12px] text-[#FFFFFFE5]'>Grid</span>
                   </li>
                   
+                 </div>
+                 <div className="display_nonemobiles">
+       <div className={`toggle-switch ${isToggled ? 'toggled' : ''}`} onClick={handleToggle}>
+        <div className="switch-handle">
+
+       </div>
+    </div>    
+    </div>
+    
                 </div>
-              ))}
-            </ul>
+                <div className="   flex items-center justify-between ">
+                 <div className="flex  border-[#212121] py-[10px] flex-col w-full">
+                 <li  className=' flex gap-[5px] items-center'>
+                    <span><SpannerSide /></span>    
+                    <span className='font-sora font-[300] text-[12px] leading-[15.12px] text-[#FFFFFFE5]'>Trade orders</span>
+                  </li>
+                  
+                 </div>
+                 <div className="display_nonemobiles">
+       <div className={`toggle-switch ${isToggleds ? 'toggled' : ''}`} onClick={handleToggles}>
+        <div className="switch-handle">
+
+       </div>
+    </div>    
+    </div>
+                </div>
+                <div className="   flex items-center justify-between ">
+                 <div className="flex  border-[#212121] py-[10px] flex-col w-full">
+                 <li  className=' flex gap-[5px] items-center'>
+                    <span><SpannerSide /></span>
+                    <span className='font-sora font-[300] text-[12px] leading-[15.12px] text-[#FFFFFFE5]'>Trade positions</span>
+                  </li>
+                  
+                 </div>
+                 <div className="display_nonemobiles">
+       <div className={`toggle-switch ${isToggledin ? 'toggled' : ''}`} onClick={handleToggledin}>
+        <div className="switch-handle">
+
+       </div>
+    </div>    
+    </div>
+    
+                </div>
+                <div className="   flex items-center justify-between ">
+                 <div className="flex  border-[#212121] py-[10px] flex-col w-full">
+                 <li  className=' flex gap-[5px] items-center'>
+                    <span><SpannerSide /></span>
+                    <span className='font-sora font-[300] text-[12px] leading-[15.12px] text-[#FFFFFFE5]'>Trade history</span>
+                  </li>
+                  
+                 </div>
+                 <div className="display_nonemobiles">
+       <div className={`toggle-switch ${isToggledl ? 'toggled' : ''}`} onClick={handleTogglel}>
+        <div className="switch-handle">
+
+       </div>
+    </div>    
+    </div>
+                </div>
+                <div className="   flex items-center justify-between ">
+                 <div className="flex  border-[#212121] py-[10px] flex-col w-full">
+                 <li  className=' flex gap-[5px] items-center'>
+                    <span><SpannerSide /></span>
+                    <span className='font-sora font-[300] text-[12px] leading-[15.12px] text-[#FFFFFFE5]'>SL/TP Level</span>
+                  </li>
+                  
+                 </div>
+                 <div className="display_nonemobiles">
+       <div className={`toggle-switch ${isToggleder ? 'toggled' : ''}`} onClick={handleToggler}>
+        <div className="switch-handle">
+
+       </div>
+    </div>    
+    </div>
+                </div>
+                <div className="   flex items-center justify-between ">
+                 <div className="flex  border-[#212121] py-[10px] flex-col w-full">
+                 <li  className=' flex gap-[5px] items-center'>
+                    <span><SpannerSide /></span>
+                    <span className='font-sora font-[300] text-[12px] leading-[15.12px] text-[#FFFFFFE5]'>Ask price</span>
+                  </li>
+                  
+                 </div>
+                 <div className="display_nonemobiles">
+       <div className={`toggle-switch ${isToggledd ? 'toggled' : ''}`} onClick={handleToggled}>
+        <div className="switch-handle">
+
+       </div>
+    </div>    
+    </div>
+    
+                </div>
+                <div className="   flex items-center justify-between ">
+                 <div className="flex  border-[#212121] py-[10px] flex-col w-full">
+                 <li  className=' flex gap-[5px] items-center'>
+                    <span><SpannerSide /></span>
+                    <span className='font-sora font-[300] text-[12px] leading-[15.12px] text-[#FFFFFFE5]'>Cost Controls'</span>
+                  </li>
+                  
+                 </div>
+                 <div className="display_nonemobiles">
+       <div className={`toggle-switch ${isToggle ? 'toggled' : ''}`} onClick={handleISToggle}>
+        <div className="switch-handle">
+
+       </div>
+    </div>    
+    </div>
+    
+                </div>
+                <div className="   flex items-center justify-between ">
+                 <div className="flex  border-[#212121] py-[10px] flex-col w-full">
+                 <li  className=' flex gap-[5px] items-center'>
+                    <span><SpannerSide /></span>
+                    <span className='font-sora font-[300] text-[12px] leading-[15.12px] text-[#FFFFFFE5]'>Trade notification</span>
+                  </li>
+                  
+                 </div>
+                 <div className="display_nonemobiles">
+       <div className={`toggle-switch ${isTogg ? 'toggled' : ''}`} onClick={handleISTogg}>
+        <div className="switch-handle">
+
+       </div>
+    </div>    
+    </div>
+    
+                </div>
+               
+                <div className="   flex items-center justify-between ">
+                 <div className="flex  border-[#212121] py-[10px] flex-col w-full">
+                 <li  className=' flex gap-[5px] items-center'>
+                     <span><Rectangle /></span> 
+                    <span className='font-sora font-[300] text-[12px] leading-[15.12px] text-[#FFFFFFE5]'>Show OHLC</span>
+                  </li>
+                  
+                 </div>
+                 <div className="display_nonemobiles">
+       <div className={`toggle-switch ${isToggl ? 'toggled' : ''}`} onClick={handleISToggl}>
+        <div className="switch-handle">
+
+       </div>
+    </div>    
+    </div>
+    
+                </div>
+                
+             </ul>
               </div>
             </div>
           </div>
-        )} 
+        )}
+        
         {activeModal === 'color' && (
           <div className="colors inset-0">
             <div className="widthed p-4 rounded-lg">
-              <div className="flex justify-between w-full ">
-                <img className='cursor-pointer' onClick={() => setActiveModal(null)} alt="" />
-              </div>
+              <div className="flex display_nonemobiles justify-between w-full py-[20px]">
+              <div className=""  onClick={() => setActiveModal(null)}> 
+              <Arrow_left />
+             </div>
+             <h4  className='chartins'>Color templates</h4>
+               </div>
               <div onClick={() => handleModalToggle('color')} >
               <ul className='w-full'>
               {spannerRowed.map((items, index) => (
@@ -214,28 +409,41 @@ export const Hamburger = () => {
             </div>
           </div>
         )} 
+
         {activeModal === 'Lang' && (
           <div className="colors inset-0">
             <div className="widthed p-4 rounded-lg">
-              <div className="flex justify-between w-full ">
-                <img className='cursor-pointer' onClick={() => setActiveModal(null)} alt="" />
-              </div>
-              <div onClick={() => handleModalToggle('color')} >
-              <ul className='w-full'>
-              <div className="flex w-full mb-[10px] pl-[5px] gap-[5px] h-[38px] items-center rounded-[5px] bg-[#201F1F]">
+              <div className="flex justify-between w-full py-[20px] display_nonemobiles ">
+              <div className=""  onClick={() => setActiveModal(null)}> 
+              <Arrow_left />
+             </div>
+             <h4  className='chartins'>Languages</h4>
+               </div>
+               
+              <div className='w-full overflows'>
+              <ul className='w-full px-[10px]'>
+              <div className="w-full flex mb-[10px] pl-[5px] gap-[5px] h-[38px] items-center rounded-[5px] bg-[#201F1F]">
           <Searchnormal/>      
-          <input type="search" placeholder='Search Symbol' className='w-full outline-none bg-transparent rounded-[5px] border-none text-[#9A9999] leading-[15.12px] text-[12px] font-[400] '/>
+          <input type="search" placeholder='Search Symbol' className='flex-wrap w-full outline-none bg-transparent rounded-[5px] border-none text-[#9A9999] leading-[15.12px] text-[12px] font-[400] '/>
         </div>
+        <div className="w-full items-center">
               {Languages.map((items, index) => (
-                <div key={index} className="flex  border-[#212121] py-[10px] flex-col w-full">
+                <div key={index} className="flex  justify-between border-[#212121] py-[10px] flex-col w-full">
                   <li  className=' flex gap-[5px] items-center'>
                     <span>{items.icons}</span>
                     <span className='font-sora font-[300] text-[12px] leading-[15.12px] text-[#FFFFFFE5]'>{items.name}</span>
                   </li>
-                  
+                  <div className="w-full flex items-center justify-center display_nonemobiles ">
+      <input
+        type="checkbox"
+        className="checkbox-customs"
+      />
+           </div>
                 </div>
               ))}
+              </div>
             </ul>
+            
               </div>
             </div>
           </div>
@@ -243,3 +451,11 @@ export const Hamburger = () => {
     </>
   )
 }
+
+
+
+
+  
+
+
+   

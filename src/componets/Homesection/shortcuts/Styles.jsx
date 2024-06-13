@@ -36,7 +36,7 @@ export const Styles = () => {
         type="checkbox"
         className="checkbox-custom"
       />
-    </div>
+           </div>
             <input type="text"  className='inputed outline-none bg-transparent  rounded-[3px] border border-[#2B2B2B]'/>
             <div className=" bgcolor bgblue border-[2px] border-[#1C1B1B]">
             </div>
