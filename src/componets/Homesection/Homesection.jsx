@@ -10,7 +10,7 @@ export const Homesection = () => {
         <div className="w-full">
         <Leftside/>
         </div>
-        <div className="w-[500px]">
+        <div className="rightside">
         <Rightside/>
         </div>
     </div>

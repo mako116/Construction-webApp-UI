@@ -61,7 +61,7 @@ export const Footer = () => {
                 <button className='footerbg'>Create New Order</button>
             </div>
          </div>
-         <div className="flex justify-end border-t border-[#DBDBDB] w-full display_nonemobile">
+         <div className="flex justify-end border-t border-[#DBDBDB]  display_nonemobile">
             <ul className='flex  items-center justify-around'>
                 <li><Tab/></li>
                 <li><TabBartab/></li>

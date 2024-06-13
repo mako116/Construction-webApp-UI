@@ -73,7 +73,7 @@ export const Sidebar = () => {
         <li className='border-b py-[5px] border-[#212121]'>
           <String />
         </li>
-        <div className=" flex ">
+        <div className=" flex display_nonedesk">
      <div className=" w-full flex  non_boches">
         <ul className='py-[20px]  flex flex-col gap-[10px]'>
           <li><ListDashes/></li>

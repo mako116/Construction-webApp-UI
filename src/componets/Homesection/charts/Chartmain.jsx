@@ -84,9 +84,9 @@ const Charts = () => {
   };
 
   return (
-    <div className='flex w-full h-screen lg:h-full'>
+    <div className='flex   w-full h-screen lg:h-full'>
    
-   <div className="w-full h-full items-center flex justify-center">
+   <div className="w-full h-full items-center flex  justify-center">
   <svg className="chart" viewBox={`0 0 ${chartWidth} ${chartHeight}`} style={{ overflow: 'visible' }}>
     {/* Shades */}
     <path d={wavePath(3)} fill="none" stroke="#f0f0f0" strokeWidth="2" />
@@ -105,7 +105,7 @@ const Charts = () => {
     </filter>
   </svg>
 </div>
-    <div className="text-[#fff] h-full justify-between flex flex-col py-[10px] text-[#978E8E] border-l-[2px] border-r-[2px] border-[#212121] px-[10px]">
+    <div className=" numbers  text-[#fff] h-full justify-between flex flex-col py-[10px] text-[#978E8E] border-l-[2px] border-r-[2px] border-[#212121] px-[10px]">
         {numbers.map((items,index)=>(
             <div key={index} className="flex  gap-[20px] flex-col w-full font-[300] text-[12px] leading-[15.12px]  w-full  over-flow-hidden">
                 <span>{items.number}</span>

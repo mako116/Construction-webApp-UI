@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import close from "../../../assests/X.svg";
+import { Arrow_left } from '../../../assests/mobile_footer/Arrow_left';
 
 
 export const Styles = () => {
@@ -17,7 +18,7 @@ export const Styles = () => {
   
   return (
     <div className="">
-    <div className="flex flex-col gap-[10px] lg:gap-[20px]">
+    <div className="flex flex-col gap-[10px] lg:gap-[20px] w-screen lg:w-full">
            <div className="string_width">
               <h4 className='font-[300] pb-[4px] text-[7px] lg:text-[10px] leading-[5px] lg:leading-[12.6px] w-full border-b-[1px] lg:border-b-[2px] flex items-center justify-center border-[#3E74FF]'>Style</h4>
               <span className='w-full font-[300] text-[7px] lg:text-[10px] leading-[5px] lg:leading-[12.6px]' onClick={toggleMenus}>Coordinates</span>
@@ -136,7 +137,7 @@ export const Styles = () => {
             <span className='text-[#FFFFFFBF] text-[9px]'>Background</span>
             <input type="text"  className='back_input  bg-transparent  rounded-[3px] border border-[#2B2B2B]'/>
             </div>
-            <div className="w-full flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
+            <div className="lg:w-full flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
            <div className="flex items-center justify-center ">
       <input
         type="checkbox"
@@ -147,8 +148,8 @@ export const Styles = () => {
             </div>
             </div>
             {/* 3rd batch */}
-            <div className="flex gap-[19px] justify-between items-center">
-            <div className="w-full flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
+            <div className="labels">
+            <div className="lg:w-full flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
            <div className="flex items-center justify-center ">
       <input
         type="checkbox"
@@ -157,7 +158,7 @@ export const Styles = () => {
     </div>
             <span className='text-[#FFFFFFBF]'>Labels</span>
              </div>
-            <div className=" w-full flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
+            <div className="w-[67px] lg:w-full flex items-center gap-[5px] font-[300] text-[9px] leading-[11.34px]">
            <div className="flex items-center justify-center ">
       <input
         type="checkbox"
@@ -197,7 +198,9 @@ export const Styles = () => {
             </div>
             {/* last button */}
             <div className="fib_main">
-              <button className='fib_button text-[#3E74FF] font-[600] text-[8.92px] leading-[11.23px]  rounded-[3.18px] border-[#3E74FF] border'>
+              <button 
+               onClick={closeMenus}
+              className='fib_button text-[#3E74FF] font-[600] text-[8.92px] leading-[11.23px]  rounded-[3.18px] border-[#3E74FF] border'>
                 Cancel
               </button>
               <button className='fib_button bg-[#3E74FF] text-[#fff] font-[600] text-[8.92px] leading-[11.23px]  rounded-[3.18px] border-[#3E74FF] border'>
@@ -210,11 +213,14 @@ export const Styles = () => {
     {modalOpen2 && (
         <div className="coordinates inset-0 ">
           <div className="widths p-0 lg:p-4 rounded-lg">
-          <div className="flex justify-between w-full  py-[10px]"> 
+          <div className="mange"> 
                   <h2 className='font-[400] text-[8px] lg:text-[12px] leading-[15.12px]'> Fibonacci</h2>
-                  <img className='cursor-pointer' onClick={closeMenus} src={close} alt="" />
-          </div>
-          <div className="flex flex-col gap-[10px] lg:gap-[20px]">
+                  <div  className="cursor-pointer display_nonemobile"  >
+                <Arrow_left   onClick={closeMenus}/>
+              </div>
+                <img className='cursor-pointer display_nonedesk'  onClick={closeMenus} src={close} alt="" />
+           </div>
+          <div className="flex flex-col gap-[10px] lg:gap-[20px] w-screen lg:w-full">
            <div className="string_width">
               <h4 className='font-[300] text-[7px] lg:text-[10px] leading-[12.6px] w-full  flex items-center justify-center '>Style</h4>
               <span className='w-full font-[300] pb-[4px] text-[7px] lg:text-[10px] leading-[4px] lg:leading-[12.6px] border-b-[1px] lg:border-b-[2px] border-[#3E74FF] flex items-center justify-center '>Coordinates</span>
@@ -249,7 +255,9 @@ export const Styles = () => {
            
             {/* last button */}
             <div className="fib_main">
-              <button className=' text-[#3E74FF] font-[600] text-[8.92px] leading-[11.23px] fib_button rounded-[3.18px] border-[#3E74FF] border'>
+              <button 
+              onClick={closeMenus}
+              className=' text-[#3E74FF] font-[600] text-[8.92px] leading-[11.23px] fib_button rounded-[3.18px] border-[#3E74FF] border'>
                 Cancel
               </button>
               <button className=' bg-[#3E74FF] text-[#fff] font-[600] text-[8.92px] leading-[11.23px] fib_button rounded-[3.18px] border-[#3E74FF] border'>

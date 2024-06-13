@@ -6,6 +6,7 @@ import LockOpen from "../../assests/inside/LockOpen.svg";
 import { Styles } from '../../componets/Homesection/shortcuts/Styles.jsx';
 import { Hamba } from '../inside/hamba.jsx';
 import { Rectangle } from '../inside/Rectangle.jsx';
+import { Arrow_left } from '../mobile_footer/Arrow_left.jsx';
 
 export const String = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -52,9 +53,12 @@ export const String = () => {
       <div className="">
         <div className={`navbar ${menuOpen ? 'open' : ''}`}>
           <ul>
-            <div className="flex justify-between w-full py-[10px]">
+            <div className="mange" onClick={closeMenu}>
               <h2 className='font-[400] text-[12px] leading-[15.12px]'>Manage drawing</h2>
-              <img className='cursor-pointer' onClick={closeMenu} src={close} alt="" />
+              <div className="cursor-pointer display_nonemobile" onClick={closeMenu}>
+                <Arrow_left  />
+              </div>
+              <img className='cursor-pointer display_nonedesk' onClick={closeMenu} src={close} alt="" />
             </div>
             <span className='text-[#FFFFFFB2] pt-[5px] font-[300] text-[12px] leading-[15.12px]'>EURUSD</span>
             <li onClick={() => handleModalToggle('Fibonacci')}>
@@ -95,10 +99,13 @@ export const String = () => {
 
         {activeModal === 'Fibonacci' && (
           <div className="fibonar inset-0">
-            <div className="widths p-4 rounded-lg">
-              <div className="flex justify-between w-full py-[10px]">
+            <div className="widths p-0 lg:p-4 rounded-[0px] lg:rounded-lg">
+              <div className="mange" onClick={() => setActiveModal(null)} >
                 <h2 className='font-[400] text-[12px] leading-[15.12px]'>Fibonacci</h2>
-                <img className='cursor-pointer' onClick={() => setActiveModal(null)} src={close} alt="" />
+                <div  className="cursor-pointer display_nonemobile" onClick={() => setActiveModal(null)} >
+                <Arrow_left  />
+              </div>
+                <img className='cursor-pointer display_nonedesk' onClick={() => setActiveModal(null)} src={close} alt="" />
               </div>
               <Styles onClick={() => handleModalToggle('Fibonacci')} />
             </div>

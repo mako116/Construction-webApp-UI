@@ -72,9 +72,9 @@ import Camera from "../../assests/Camera.svg"
     <>
     <div className="border-b-[2px] border-[#212121] w-full bg-[#191919] text-[#C7C7C7]">
         <div className="px-[60px] flex py-[11px]">
-          <div className="w-full flex">
+          <div className="w-full flex ">
             {navs.map((items,index)=>(
-              <div className=" flex justify-between ">
+              <div className="display_nonedesk flex justify-between ">
               <div className="header_img w-full gap-[10px] border-l border-r-[1px] border-[#212121] py-[7px] px-[5px] lg:px-[10px] flex justify-around " key={index}>
                 <span className='font-[400] text-[6px] lg:text-[11px] leading-[13.86px] '>{items.name}</span>
                 <img src={items.img} alt="" className='' />
@@ -83,8 +83,17 @@ import Camera from "../../assests/Camera.svg"
               </div>
               </div>
             ))}
+           <div className="flex pt-[10px] justify-between w-full text-[12px]">
+           <span>h1</span>
+            <img src={candle} alt="" />
+            <img src={rating} alt="" />
+            <img src={together} alt="" />
+            <img src={minusndplus} alt="" />
+            <img src={dollar} alt="" />
+           </div>
           </div>
-          <div className="flex gap-[20px]">
+         
+          <div className="flex gap-[20px] display_nonedesk">
             <img src={ArrowsOut} alt="" />
             <img src={Camera} alt="" />
           </div>

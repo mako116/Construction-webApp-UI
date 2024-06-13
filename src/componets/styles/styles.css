@@ -1,6 +1,18 @@
 .display_nonedesk{
 display: block;
 }
+.mange{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+ }
+
+.rightside{
+  width: 500px;
+}
 .display_nonemobile{
   display: none;
   }
@@ -46,6 +58,12 @@ display: block;
     top: 100px;
     left: 310px;  
 }
+.labels{
+  display: flex;
+  gap: 19px;
+  justify-content: space-between;
+  align-items: center;
+ }
 .colors{
   position: absolute;
   top: 280px;
@@ -235,6 +253,7 @@ border: 1px 0px 0px 0px;
 }
 
 .chart {
+  /* padding: 30px; */
   width: 100%;
   height: 150px;
 }
@@ -727,7 +746,7 @@ border: 1px 0px 0px 0px;
           border-radius: 8px;
            left: 0px;
            position: absolute;
-           border: 1px solid #D3D0D0;
+           /* border: 1px solid #D3D0D0; */
     } 
     .coordinates{
       position: absolute;
@@ -739,6 +758,158 @@ border: 1px 0px 0px 0px;
       }
       .display_nonemobile{
         display: block;
-        /* margin-top: 130px; */
+        z-index: -1000;
+        /* margin-top: 40px; */
       }
+      .chart {
+        /* width: 200px; */
+        height: 150px;
+      }
+      /* .numbers{
+        position: absolute;
+        right: 0;
+      } */
+      .rightside{
+        width: 0;
+        
+      }   
+      .sidebar{
+        display: flex;
+        width: 100%;
+        gap: 50px;
+        border-right: 1px solid #1E1E1E;
+        height: 100vh;
+       } 
+       .navbar{
+        width: 100%;
+        height: 115vh;
+        left: 0;
+        top: 0;
+       }
+       .navbar ul {
+        height: 100%;
+        left: 0;
+        z-index: 1000;
+       position: absolute;
+         width: 100%;
+        padding-top: 10px;
+         padding-left: 25px;
+         padding-right: 25px;
+         border-radius: 0;
+       }
+      
+      .navbar ul li {
+       display: flex;
+       width: 100%;
+       align-items: center; 
+       gap: 5px;
+       padding-top: 10px;
+       border-bottom: 1px solid #212121;
+       padding-bottom: 10px;
+         }
+         .mange{
+          display: flex;
+          justify-content: start;
+          align-items: end;
+          gap: 200px;
+          flex-direction: row-reverse;
+          width: 100%;
+          padding-top: 10px;
+          padding-bottom: 30px;
+         }
+         .fibonar{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;  
+      }
+      .string_width{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        padding-right: 25px;
+        padding-left: 25px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        align-items: center;
+        text-align: center;
+       }
+       .inputs{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+       }
+       .bgcolor{
+        margin-left: 20px;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #2B2B2B;
+        }
+        .back_input{
+          width: 56px;
+          height: 15px;
+         }
+         .inputed{
+          width: 77px;
+          height: 20px;
+          }
+        .back_ins{
+          width: 100%;
+          display: flex;
+          gap: 2px;
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding-left: 20px;
+          padding-right: 20px;
+          } 
+          .labels{
+            width: 100%;
+            display: flex;
+            gap: 19px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 20px;
+            padding-left: 20px;
+           }
+           .fourth_batch{
+            width: 100%;
+            display: flex;
+            padding-top: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            justify-content: space-between;
+            font-size: 9px;
+           }
+           .select{
+            width: 108px;
+            height: 20px;
+            padding-left: 4px;
+            font-weight: 400;
+            font-size: 9px;
+           }
+           .fib_main{
+            display: flex;
+            gap: 5px;
+            justify-content:end;
+            padding-top: 15px;
+            padding-right: 20px;
+            flex-wrap: wrap;
+            padding-bottom: 15px;
+            }
+            .header_img img{
+              width: 10px;
+              display: none;
+            }
+            .header_img {
+              width: 50px;
+            }
   }
