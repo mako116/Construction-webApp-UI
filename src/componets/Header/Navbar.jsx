@@ -83,7 +83,7 @@ import Camera from "../../assests/Camera.svg"
               </div>
               </div>
             ))}
-           <div className="flex pt-[10px] justify-between w-full text-[12px]">
+           <div className="display_nonemobile flex gap-[5px] justify-between w-full text-[12px]">
            <span>h1</span>
             <img src={candle} alt="" />
             <img src={rating} alt="" />

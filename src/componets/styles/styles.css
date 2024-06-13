@@ -912,4 +912,53 @@ border: 1px 0px 0px 0px;
             .header_img {
               width: 50px;
             }
+           
+  }
+
+  @media(max-width:350px) {
+    .bgcolor{
+      margin-left: 10px;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #2B2B2B;
+      }
+    .inputs{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      gap: 4px;
+      padding-left: 5px;
+      padding-right: 5px;
+     }
+     .back_ins{
+      width: 100%;
+      display: flex;
+      gap: 2px;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 13px;
+      padding-right: 13px;
+      } 
+      .mange{
+        display: flex;
+        justify-content: start;
+        align-items: end;
+        gap: 100px;
+        flex-direction: row-reverse;
+        width: 100%;
+        padding-top: 10px;
+         padding-bottom: 30px;
+       }
+      .labels{
+        width: 100%;
+        display: flex;
+        gap: 19px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 13px;
+        padding-left: 13px;
+       }
   }
