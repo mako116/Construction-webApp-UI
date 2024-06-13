@@ -36,7 +36,7 @@ export const Rightside = () => {
   ]
   return (
     <>
-    <div className=" font-sora bg-[#1A1A1A]">
+    <div className="display_nonedesk font-sora bg-[#1A1A1A]">
       <div className="w-full h-screen px-[10px]">
       <div className="flex w-full mb-[10px] pl-[5px] gap-[5px] h-[38px] items-center rounded-[5px] bg-[#201F1F]">
           <Searchnormal/>      

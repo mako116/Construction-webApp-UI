@@ -84,7 +84,7 @@ const Charts = () => {
   };
 
   return (
-    <div className='flex w-full h-full'>
+    <div className='flex w-full h-screen lg:h-full'>
    
    <div className="w-full h-full items-center flex justify-center">
   <svg className="chart" viewBox={`0 0 ${chartWidth} ${chartHeight}`} style={{ overflow: 'visible' }}>

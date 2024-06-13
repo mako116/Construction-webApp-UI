@@ -75,9 +75,9 @@ import Camera from "../../assests/Camera.svg"
           <div className="w-full flex">
             {navs.map((items,index)=>(
               <div className=" flex justify-between ">
-              <div className="w-full gap-[10px] border-l border-r border-[#212121] py-[7px] px-[10px] flex justify-around " key={index}>
-                <span className='font-[400] text-[11px] leading-[13.86px] '>{items.name}</span>
-                <img src={items.img} alt="" />
+              <div className="header_img w-full gap-[10px] border-l border-r-[1px] border-[#212121] py-[7px] px-[5px] lg:px-[10px] flex justify-around " key={index}>
+                <span className='font-[400] text-[6px] lg:text-[11px] leading-[13.86px] '>{items.name}</span>
+                <img src={items.img} alt="" className='' />
               
                 
               </div>

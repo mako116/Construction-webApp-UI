@@ -1,5 +1,10 @@
 import React from 'react'
 import { Fill } from '../../assests/Fill 1'
+import { Tab } from '../../assests/mobile_footer/tab'
+import { TabBartab } from '../../assests/mobile_footer/_TabBar-tab'
+import { Stack } from '../../assests/mobile_footer/Stack'
+import { ClockClockwise } from '../../assests/mobile_footer/ClockClockwise'
+import { Settigs } from '../../assests/mobile_footer/settigs'
 
 export const Footer = () => {
     const balance = [
@@ -23,8 +28,8 @@ export const Footer = () => {
     <>
     <div className=" font-sora bg-[#191919]">
         <div className="w-full  h-full py-[1px]">
-        <div className="bg-[#201F1F]">
-            <div className="bg-[#191919] w-full py-[10px] text-[#B4B4B4] font-[400] text-[11px] leading-[13.86px] pr-[50px] flex border-t border-b  border-[#1E1E1E] justify-around gap-[20px] ">
+        <div className="bg-[#201F1F] display_nonedesk">
+            <div className="w-full border-t border-b  border-[#1E1E1E] footer_up justify-around bg-[#191919] text-[#B4B4B4] font-[400] ">
                 <span>Symbol</span>
                 <span>Ticket</span>
                 <span>Time</span>
@@ -36,27 +41,37 @@ export const Footer = () => {
                 <span>Swap</span>
                 <span>Profit</span>
             </div>
-            <div className="w-full items-center px-[20px] flex bg-[#201F1F] gap-[20px] py-[6px] h-full">
+            <div className="footer_down">
                 {balance.map((items,index)=>(
-                    <div key={index} className="gap-[20px] text-[13px] font-[400] leading-[16.38px] text-[#B4B4B4] justify-around   ">
+                    <div key={index} className="text-[#B4B4B4] footer_down2 ">
                         <span className=''>{items.Balance}</span>
                     </div>
                 ))}
-                 <div className=" flex w-[500px] text-[#B4B4B4] gap-[30px] items-center justify-end gap-[20px] text-[12px] font-[400] leading-[16.38px] text-[#B4B4B4]">
+                 <div className="text-[#B4B4B4] footer_down3">
                 <span>0.00</span>
                 <span>USD</span>
             </div>
             </div>
            
         </div>
-        <div className="h-[30vh] pt-[20px]  flex-col flex items-center justify-center text-center">
+        <div className="h-[30vh] pt-[20px] display_nonedesk  flex-col flex items-center justify-center text-center">
             <div className=" flex flex-col items-center gap-[5px] pb-[12px]">
                  <Fill/>
                  <h4 className=' text-[#B4B4B4] font-[400] text-[13px] '>You don't have any positions</h4>
                 <button className='footerbg'>Create New Order</button>
             </div>
          </div>
+         <div className="flex justify-end border-t border-[#DBDBDB] w-full display_nonemobile">
+            <ul className='flex  items-center justify-around'>
+                <li><Tab/></li>
+                <li><TabBartab/></li>
+                <li><Stack/></li>
+                <li><ClockClockwise/></li>
+                <li><Settigs/></li>
+            </ul>
         </div>
+        </div>
+
     </div>
     </>
   )
