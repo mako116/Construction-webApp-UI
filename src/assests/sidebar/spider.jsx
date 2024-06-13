@@ -5,11 +5,10 @@ import { Rectangle } from '../inside/Rectangle';
 
 export const Spider = ({ isOpen, onToggle, onClose }) => {
   const spannerRowed = [
-    { icons: <Hamba />, name: 'GandLine' },
-    { icons: <SpannerSide />, name: 'Gann Fan' },
-    { icons: <SpannerSide />, name: 'Gann Fan' },
-
-    // { icons: <Rectangle />, name: 'Gann grid' },
+    { icons: <Hamba />, name: 'Regression channel' },
+    { icons: <SpannerSide />, name: 'Equidistant channel' },
+    { icons: <SpannerSide />, name: 'Andrews Pitchfork' },
+    { icons: <Rectangle />, name: 'StdDev channel' },
   ];
 
   return (

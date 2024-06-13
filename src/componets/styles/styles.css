@@ -16,6 +16,13 @@ display: block;
 .display_nonemobile{
   display: none;
   }
+
+  .display_nonemobiles{
+    display: none;
+     gap: 5px;
+    /* flex gap-[5px] justify-between w-full text-[12px */
+    }
+  
 .fonts_sora{
   font-family: "Sora";
 
@@ -80,7 +87,7 @@ display: block;
   left: 1%; 
 }
 .spannered{
-  position: fixed;
+  position: absolute;
   top: 260px;
   left: 1%;
 }
@@ -912,9 +919,46 @@ border: 1px 0px 0px 0px;
             .header_img {
               width: 50px;
             }
-           
+            .display_nonemobiles{
+              display: flex;
+              }
+              .spannered,
+              .spider{
+                position: absolute;
+                top: 260px;
+                left: 50px;
+                box-shadow: 0px 0px 0px 1px #2B2B2B;
+                width: 400px;
+                height: 150px;
+              }
+              .spider{
+                position: absolute;
+                top: 140px;
+                left: 50px;
+                box-shadow: 0px 0px 0px 1px #2B2B2B;
+                width: 400px;
+                height: 150px;
+              }
   }
 
+  @media(max-width:484px) {
+    .spannered{
+      position: absolute;
+      top: 260px;
+      left: 50px;
+      box-shadow: 0px 0px 0px 1px #2B2B2B;
+      width: 200px;
+      height: 150px;
+    }
+    .spider{
+      position: absolute;
+      top: 140px;
+      left: 50px;
+      box-shadow: 0px 0px 0px 1px #2B2B2B;
+      width: 300px;
+      height: 150px;
+    }
+  }
   @media(max-width:350px) {
     .bgcolor{
       margin-left: 10px;
@@ -961,4 +1005,12 @@ border: 1px 0px 0px 0px;
         padding-right: 13px;
         padding-left: 13px;
        }
+       .spider{
+        position: absolute;
+        top: 140px;
+        left: 50px;
+        box-shadow: 0px 0px 0px 1px #2B2B2B;
+        width: 200px;
+        height: 150px;
+      }  
   }

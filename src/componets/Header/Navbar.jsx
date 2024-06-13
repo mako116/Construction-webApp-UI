@@ -83,7 +83,8 @@ import Camera from "../../assests/Camera.svg"
               </div>
               </div>
             ))}
-           <div className="display_nonemobile flex gap-[5px] justify-between w-full text-[12px]">
+            <div className="flex gap-[5px]  w-full text-[12px] display_nonemobiles">
+           <div className=" flex gap-[5px] justify-around w-full text-[12px]">
            <span>h1</span>
             <img src={candle} alt="" />
             <img src={rating} alt="" />
@@ -91,11 +92,14 @@ import Camera from "../../assests/Camera.svg"
             <img src={minusndplus} alt="" />
             <img src={dollar} alt="" />
            </div>
+           </div>
           </div>
          
-          <div className="flex gap-[20px] display_nonedesk">
-            <img src={ArrowsOut} alt="" />
-            <img src={Camera} alt="" />
+          <div className="  display_nonedesk">
+           <div className="pt-[10px] flex gap-[20px] items-center justify-center">
+           <img src={ArrowsOut} alt="" />
+           <img src={Camera} alt="" />
+           </div>
           </div>
         </div>
     </div>

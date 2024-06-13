@@ -42,7 +42,7 @@ export const Sidebar = () => {
             isOpen={activeModal === 'Trending'}
             onToggle={() => handleModalToggle('Trending')}
             onClose={() => setActiveModal(null)}
-          />
+          /> 
         </li>
         <li className='border-b py-[5px] border-[#212121]'>
           <Spider
