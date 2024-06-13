@@ -1,6 +1,12 @@
 .display_nonedesk{
 display: block;
 }
+.fibs{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+ }
 .mange{
   display: flex;
   justify-content: space-between;
@@ -82,7 +88,7 @@ display: block;
     left: 94%;   
 }
 .spanner{
-  position: fixed;
+  position: absolute;
   top: 80px;
   left: 1%; 
 }
@@ -744,7 +750,8 @@ border: 1px 0px 0px 0px;
 
 
   @media(max-width:692px) {
-    .widths{
+    .widths,
+    .widthed{
       width: 100%;
       height: 100%;
            padding-top: 10px;
@@ -922,8 +929,7 @@ border: 1px 0px 0px 0px;
             .display_nonemobiles{
               display: flex;
               }
-              .spannered,
-              .spider{
+              .spannered{
                 position: absolute;
                 top: 260px;
                 left: 50px;
@@ -936,6 +942,21 @@ border: 1px 0px 0px 0px;
                 top: 140px;
                 left: 50px;
                 box-shadow: 0px 0px 0px 1px #2B2B2B;
+                width: 400px;
+                height: 150px;
+              }
+              .fibs{
+                width: 100%;
+                justify-content: space-between;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                gap: 10px;
+               }
+               .spanner{
+                position: absolute;
+                top: 80px;
+                left: 50px; 
                 width: 400px;
                 height: 150px;
               }
@@ -956,6 +977,13 @@ border: 1px 0px 0px 0px;
       left: 50px;
       box-shadow: 0px 0px 0px 1px #2B2B2B;
       width: 300px;
+      height: 150px;
+    }
+    .spanner{
+      position: absolute;
+      top: 80px;
+      left: 50px; 
+      width: 290px;
       height: 150px;
     }
   }
@@ -1010,7 +1038,14 @@ border: 1px 0px 0px 0px;
         top: 140px;
         left: 50px;
         box-shadow: 0px 0px 0px 1px #2B2B2B;
-        width: 200px;
+        width: 20px;
         height: 150px;
       }  
+      .spanner{
+        position: absolute;
+        top: 80px;
+        left: 50px; 
+        width: 210px;
+        height: 150px;
+      }
   }

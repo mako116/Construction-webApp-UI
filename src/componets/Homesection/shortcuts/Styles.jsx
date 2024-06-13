@@ -17,8 +17,8 @@ export const Styles = () => {
    
   
   return (
-    <div className="">
-    <div className="flex flex-col gap-[10px] lg:gap-[20px] w-screen lg:w-full">
+    <div className="w-full">
+    <div className="flex flex-col gap-[10px] lg:gap-[20px]  w-full">
            <div className="string_width">
               <h4 className='font-[300] pb-[4px] text-[7px] lg:text-[10px] leading-[5px] lg:leading-[12.6px] w-full border-b-[1px] lg:border-b-[2px] flex items-center justify-center border-[#3E74FF]'>Style</h4>
               <span className='w-full font-[300] text-[7px] lg:text-[10px] leading-[5px] lg:leading-[12.6px]' onClick={toggleMenus}>Coordinates</span>
@@ -220,7 +220,7 @@ export const Styles = () => {
               </div>
                 <img className='cursor-pointer display_nonedesk'  onClick={closeMenus} src={close} alt="" />
            </div>
-          <div className="flex flex-col gap-[10px] lg:gap-[20px] w-screen lg:w-full">
+          <div className="flex flex-col gap-[10px] lg:gap-[20px] w-full">
            <div className="string_width">
               <h4 className='font-[300] text-[7px] lg:text-[10px] leading-[12.6px] w-full  flex items-center justify-center '>Style</h4>
               <span className='w-full font-[300] pb-[4px] text-[7px] lg:text-[10px] leading-[4px] lg:leading-[12.6px] border-b-[1px] lg:border-b-[2px] border-[#3E74FF] flex items-center justify-center '>Coordinates</span>

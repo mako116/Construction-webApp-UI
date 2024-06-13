@@ -16,6 +16,7 @@ import { Envelope } from '../hamburgar/Envelope.jsx';
 import { Question } from '../hamburgar/Question.jsx';
  import { Rectangle } from '../inside/Rectangle';
 import { Searchnormal } from '../search-normal.jsx';
+import { Arrow_left } from '../mobile_footer/Arrow_left.jsx';
 
 export const Hamburger = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -71,7 +72,11 @@ export const Hamburger = () => {
             <div className={`line ${menuOpen ? 'open' : ''}`}></div>
           </div>
           <div className={`navbar ${menuOpen ? 'open' : ''}`}>
+           
             <ul>
+            <div onClick={closeMenu} className="cursor-pointer text-[#fff] display_nonemobiles">
+              <Arrow_left />
+            </div>
               <div className="flex justify-center flex-col items-center w-full gap-[10px]">
                 <h4>BS DEFI WEB DEMO</h4>
                 <p className='text-[#9E9A9A] fonts_monst font-[500] text-[12px] leading-[14.63px] text-center'>464835282920 - BS DEFI - Demo - Hegde</p>
@@ -164,6 +169,7 @@ export const Hamburger = () => {
               
             </ul>
           </div> 
+          
           {activeModal === 'Fibonacci' && (
           <div className="fibonar inset-0">
             <div className="widthed p-4 rounded-lg">
@@ -171,7 +177,7 @@ export const Hamburger = () => {
                 <img className='cursor-pointer' onClick={() => setActiveModal(null)} alt="" />
               </div>
               <div onClick={() => handleModalToggle('Fibonacci')} >
-              <ul className='w-full'>
+              <ul className='w-full '>
               {spannerRows.map((items, index) => (
                 <div key={index} className="flex  border-[#212121] py-[10px] flex-col w-full">
                   <li  className=' flex gap-[5px] items-center'>
