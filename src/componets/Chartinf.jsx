@@ -8,15 +8,14 @@ const TradingViewWidget = () => {
     script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
     script.async = true;
     script.innerHTML = JSON.stringify({
-      "width": "100%",
-      "height": "100%",
-      "symbol": "BINANCE:BTCUSDT",
+      "autosize": true,
+      "symbol": "NASDAQ:AAPL",
       "interval": "D",
-      "timezone": "exchange",
+      "timezone": "Etc/UTC",
       "theme": "dark",
+      "backgroundColor": "#191919",
       "style": "1",
       "locale": "en",
-      "backgroundColor": "#191919",
       "hide_top_toolbar": true,
       "hide_legend": true,
       "allow_symbol_change": false,
@@ -34,9 +33,9 @@ const TradingViewWidget = () => {
   }, []);
 
   return (
-    <div className="w-full h-screen lg:h-screen " ref={containerRef}>
-      <div className="tradingview-widget-container__widget"></div>
-        
+    <div className="tradingview-widget-container" style={{ height: '100%', width: '100%' }}>
+      <div className="tradingview-widget-container__widget" style={{ height: 'calc(100% - 32px)', width: '100%' }} ref={containerRef}></div>
+       
     </div>
   );
 };
