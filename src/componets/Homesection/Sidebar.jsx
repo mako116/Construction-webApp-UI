@@ -9,10 +9,10 @@ import { Eye } from '../../assests/eye.jsx';
 import { Unlock } from '../../assests/unlock.jsx';
 import { Tab } from '../../assests/sidebar/Tab.jsx';
 import { String } from '../../assests/sidebar/String.jsx';
-import { Hamburger } from '../../assests/sidebar/Hamburger.jsx';
-import { ListDashes } from '../../assests/sidebar/ListDashes.jsx';
+ import { ListDashes } from '../../assests/sidebar/ListDashes.jsx';
 import { ClockCounterClockwise } from '../../assests/sidebar/ClockCounterClockwise.jsx';
 import { Notepad } from '../../assests/sidebar/Notepad.jsx';
+import { Hamburger } from '../All_sidebars/Hamburger.jsx';
 
 export const Sidebar = () => {
    const [activeModal, setActiveModal] = useState(null);

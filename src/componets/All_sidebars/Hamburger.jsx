@@ -1,26 +1,29 @@
 import React, { useState } from 'react'
-import { Hamba } from '../inside/hamba';
-import close from "../../assests/X.svg";
-import { SpannerSide } from "../../assests/inside/SpannerSide.jsx";
-import gear from "../../assests/inside/GearSix.svg";
-import LockOpen from "../../assests/inside/LockOpen.svg";
-import { Logo } from '../hamburgar/logo.jsx';
-import { Arrow } from './arrow.jsx';
-import { Candle } from '../candle.jsx';
-import { Darktheme } from '../hamburgar/darktheme.jsx';
-import { Colorstemps } from '../hamburgar/colorstemps.jsx';
-import { BS } from '../hamburgar/BS.jsx';
-import { Calendar } from '../hamburgar/Calendar.jsx';
-import { Trajnslate } from '../hamburgar/Trajnslate.jsx';
-import { Envelope } from '../hamburgar/Envelope.jsx';
-import { Question } from '../hamburgar/Question.jsx';
- import { Rectangle } from '../inside/Rectangle';
-import { Searchnormal } from '../search-normal.jsx';
-import { Arrow_left } from '../mobile_footer/Arrow_left.jsx';
-import { SnapchatLogo } from '../contact/SnapchatLogo.jsx';
-import { TiktokLogo } from '../contact/TiktokLogo.jsx';
-import { TwitterLogo } from '../contact/TwitterLogo.jsx';
-import { WhatsappLogo } from '../contact/WhatsappLogo.jsx';
+import { Hamba } from '../../assests/inside/hamba';
+import { SpannerSide } from '../../assests/inside/SpannerSide';
+import { Rectangle } from '../../assests/inside/Rectangle';
+import { Candle } from '../../assests/candle';
+import { Arrow_left } from '../../assests/mobile_footer/Arrow_left';
+import { Logo } from '../../assests/hamburgar/logo';
+import { Arrow } from '../../assests/sidebar/arrow';
+import { Calendar } from '../../assests/hamburgar/Calendar';
+import { Trajnslate } from '../../assests/hamburgar/Trajnslate';
+import { Question } from '../../assests/hamburgar/Question';
+import { Darktheme } from '../../assests/hamburgar/darktheme';
+import { BS } from '../../assests/hamburgar/BS';
+import { Envelope } from '../../assests/hamburgar/Envelope';
+import { SnapchatLogo } from '../../assests/contact/SnapchatLogo';
+import { TiktokLogo } from '../../assests/contact/TiktokLogo';
+import { TwitterLogo } from '../../assests/contact/TwitterLogo';
+import { WhatsappLogo } from '../../assests/contact/WhatsappLogo';
+import { Colorstemps } from '../../assests/hamburgar/colorstemps';
+import { Searchnormal } from '../../assests/search-normal';
+ import close from "../../assests/X.svg"
+import GooglePlay from "../../assests/contact/GooglePlay.svg"
+import huawei1 from "../../assests/contact/huawei1.svg"
+import apk from "../../assests/contact/APK.svg"
+import AppStore from "../../assests/contact/AppStore.svg"
+
 
 export const Hamburger = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -108,6 +111,16 @@ export const Hamburger = () => {
       {name: 'Hugarian' },
       
     ];
+
+    const Calendars = [
+      {svgs:AppStore ,name:"iPhone/ ipad - Appstore" },
+      {svgs: apk , name:"Android - Google play"},
+      {svgs:GooglePlay,name:"Android - Huawei store"},
+      {svgs:huawei1, name: "Android - Download APK"},
+      
+
+      
+    ];
     return (
     <>
        <div className="hamburger" onClick={toggleMenu}>
@@ -175,7 +188,7 @@ export const Hamburger = () => {
                       <Arrow/>
                     </div>
                     <div className="flex w-full justify-between items-center">
-                     <div className="flex gap-[5px]">
+                     <div onClick={() => handleModalToggle('Economic')} className="flex gap-[5px]">
                      <Calendar/>
                      <span>Economic calendar</span>
                      </div>
@@ -216,6 +229,7 @@ export const Hamburger = () => {
             </ul>
           </div> 
           
+          {/* Fibonacci */}
           {activeModal === 'Fibonacci' && (
           <div className="fibonar inset-0">
             <div className="widthed p-4 rounded-lg">
@@ -390,6 +404,7 @@ export const Hamburger = () => {
           </div>
         )}
         
+        {/* color */}
         {activeModal === 'color' && (
           <div className="colors inset-0">
             <div className="widthed p-4 rounded-lg">
@@ -416,6 +431,7 @@ export const Hamburger = () => {
           </div>
         )} 
 
+        {/* Lang */}
         {activeModal === 'Lang' && (
           <div className="colors inset-0">
             <div className="widthed p-4 rounded-lg">
@@ -454,7 +470,8 @@ export const Hamburger = () => {
             </div>
           </div>
         )}
-        
+
+        {/* Contact */}
          {activeModal === 'Contact' && (
           <div className="contact inset-0">
             <div className="widthin p-4 rounded-lg">
@@ -517,6 +534,36 @@ export const Hamburger = () => {
             </div>
           </div>
         )} 
+
+        {/* Economic */}
+         {activeModal === 'Economic' && (
+          <div className="Calendareds inset-0">
+            <div className="widthed  border-[1px] border-[solid] border-[#1E1E1E]  p-4 rounded-lg">
+              <div className="text-[#fff] flex justify-between w-full py-[30px] lg:py-[20px] display_nonemobiles ">
+              <div className="ml-[10px] cursor-pointer"  onClick={() => setActiveModal(null)}> 
+              <Arrow_left />
+             </div>
+             <h4  className='chartins'>Contact Us</h4>
+               </div>
+               {/* <p>Feel free to contact us and we’ll get back to you!</p> */}
+              <div className='w-full fonts_monst'>
+                {Calendars.map((items,index)=>(
+                   <ul key={index} className='w-full  px-[10px]'>
+                    <div className="flex py-[10px] gap-[20px] fonts_sora font-[500] text-[12px] leading-[15.12px]">
+                      <img src={items.svgs} alt="" />
+                      <h2 className=' 
+                      text-[#FFFFFFE5]'>{items.name}</h2>
+                      </div>
+                   </ul>
+                ))}
+             
+            
+              </div>
+            </div>
+          </div>
+        )} 
+
+
     </>
   )
 }
