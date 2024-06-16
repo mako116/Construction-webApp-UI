@@ -17,6 +17,10 @@ import { Question } from '../hamburgar/Question.jsx';
  import { Rectangle } from '../inside/Rectangle';
 import { Searchnormal } from '../search-normal.jsx';
 import { Arrow_left } from '../mobile_footer/Arrow_left.jsx';
+import { SnapchatLogo } from '../contact/SnapchatLogo.jsx';
+import { TiktokLogo } from '../contact/TiktokLogo.jsx';
+import { TwitterLogo } from '../contact/TwitterLogo.jsx';
+import { WhatsappLogo } from '../contact/WhatsappLogo.jsx';
 
 export const Hamburger = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -140,6 +144,8 @@ export const Hamburger = () => {
                      </div>
                       <Arrow/>
                     </div>
+
+
                     <div className="flex w-full justify-between items-center">
                      <div className="flex gap-[5px]">
                      <Candle/>
@@ -189,7 +195,7 @@ export const Hamburger = () => {
                      </div>
                       <Arrow/>
                     </div>
-                    <div className="flex w-full justify-between items-center">
+                    <div onClick={() => handleModalToggle('Contact')} className="flex w-full justify-between items-center">
                      <div className="flex gap-[5px]">
                      <Envelope/>
                      <span>Contact us</span>
@@ -442,6 +448,69 @@ export const Hamburger = () => {
                 </div>
               ))}
               </div>
+            </ul>
+            
+              </div>
+            </div>
+          </div>
+        )}
+        
+         {activeModal === 'Contact' && (
+          <div className="contact inset-0">
+            <div className="widthin p-4 rounded-lg">
+              <div className="text-[#fff] flex justify-between w-full py-[30px] lg:py-[20px] display_nonemobiles ">
+              <div className="ml-[10px] cursor-pointer"  onClick={() => setActiveModal(null)}> 
+              <Arrow_left />
+             </div>
+             <h4  className='chartins'>Contact Us</h4>
+               </div>
+               {/* <p>Feel free to contact us and we’ll get back to you!</p> */}
+              <div className='w-full fonts_monst'>
+              <ul className='w-full px-[10px]'>
+              <div className="display_nonedesk flex py-[10px] justify-between w-full">
+              <h4  className='texts_head'>Contact Us</h4>
+              <div className="">
+              <div className=" w-full h-full flex-col flex items-end justify-end">
+                  <img className='cursor-pointer' src={close} onClick={() => setActiveModal(null)} alt="" />
+                </div>
+                </div>
+                </div>
+             <div className="contacts_btw ">
+              
+              <div className="divs_left">
+              <h4  className='text-[#fff] display_nonemobiles'>Contact Us</h4>
+
+              <p className='font-[500] pb-[5px] text-[9px] leading-[10.97px] text-[#B8B8B8]'>Feel free to contact us and we’ll get back to you!</p>
+             
+             <div className="search">
+               <div className="w-full flex mb-[10px] pl-[5px] gap-[5px] h-[30px] lg:h-[45px] items-center rounded-[5px] bg-[#201F1F]">
+           <input type="text" placeholder='Name' className='pl-[10px] flex-wrap w-full outline-none bg-transparent rounded-[5px] border-none text-[#AEAEAE] leading-[12.19px] text-[7px] lg:text-[10px] font-[400] '/>
+             </div>
+             <div className="w-full flex mb-[10px] pl-[5px] gap-[5px] h-[30px] lg:h-[45px] items-center rounded-[5px] bg-[#201F1F]">
+          <input type="email" placeholder='Enter Address' className='pl-[10px] flex-wrap w-full outline-none bg-transparent rounded-[5px] border-none text-[#AEAEAE] leading-[12.19px] text-[7px] lg:text-[10px] font-[400] '/>
+             </div>
+             <div className="w-full flex mb-[10px] pl-[5px] gap-[5px] h-[30px] lg:h-[45px] items-center rounded-[5px] bg-[#201F1F]">
+          <input type="text" placeholder='Tell us about it' className='pl-[10px] flex-wrap w-full outline-none bg-transparent rounded-[5px] border-none text-[#AEAEAE] leading-[12.19px] text-[7px] lg:text-[10px] font-[400] '/>
+             </div>
+
+             </div>
+             <button className='w-full h-[40px] bgblue text-[#fff] font-[600] text-[8.92px] leading-[11.23px] h-[23.74px] rounded-[3.18px] border-[#3E74FF] border'>
+                Send
+              </button>
+              </div>
+              <div className=" divs_right">
+               
+              <div className="flex flex-col items-center w-full lg:w-[163px] gap-[15px] text-[#958D8D] font-[500] text-[9px] leading-[10.97px]">
+              <p className='text-[#B8B8B8] text-center md:text-start  '>Tell us about your challenges you’re facing and be sure to be attended to within a nick of time</p>
+              <div className="flex gap-[10px] py-[10px]">
+                <SnapchatLogo/>
+                <TiktokLogo/>
+                <TwitterLogo/>
+                <WhatsappLogo/>
+              </div>
+              </div>
+              </div>
+            </div>
             </ul>
             
               </div>

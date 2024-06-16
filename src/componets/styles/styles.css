@@ -1,6 +1,36 @@
 .display_nonedesk{
 display: block;
 }
+
+.texts_head{
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18.29px;
+  width: 100%;
+  color: #fff;
+}
+.divs_left{
+  width: 60%;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+ }
+ .divs_right{
+  width: 40%;
+  margin-top: 30px;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  }
+
+.contacts_btw{
+width: 100%;
+display: flex;
+gap: 10px;
+justify-content: space-between;
+ 
+}
 .input_screems{
   width: 100%;
   display: flex;
@@ -111,6 +141,11 @@ display: block;
   top: 280px;
   left: 310px;  
 }
+.contact{
+  position: absolute;
+  top: 280px;
+  left: 350px;  
+}
 .coordinates{
   position: absolute;
     top: 150px;
@@ -131,7 +166,26 @@ display: block;
   top: 140px;
   left: 1%;
 }
-
+.widthin{
+  background: #1A1A1A;
+  width: 570px;
+height: 337px;
+border-radius: 5px 0px 0px 0px;
+padding-top: 10px;
+padding-left: 15px;
+padding-right: 15px;
+border-radius: 8px;
+align-items: start;
+flex-direction: column;
+flex-wrap: wrap;
+gap: 0px;
+top: 0px;
+left: 35px;
+ z-index: 1000;
+position: absolute;
+display: flex;
+flex-direction: column;
+}
 .widthed{
   width: 228px;
    /* height: 100%; */
@@ -512,7 +566,11 @@ border: 1px 0px 0px 0px;
       line-height: 11.34px;
     }
    @media(max-width:1330px) {
-  
+    .contact{
+      position: absolute;
+      top: 280px;
+      left: 260px;  
+    }
     .navbar ul {
       width: 236px;
   /* height: 246px; */
@@ -672,6 +730,11 @@ border: 1px 0px 0px 0px;
   }
 
   @media(max-width:1057px) {
+    .contact{
+      position: absolute;
+      top: 280px;
+      left: 260px;  
+    }
     .footer_down{
   
       padding-left: 20px;
@@ -768,8 +831,40 @@ border: 1px 0px 0px 0px;
         top: 100px;
         left: 230px;  
     }
-    
-
+    .divs_left{
+      width: 50%;
+      display: flex;
+      gap: 5px;
+      flex-direction: column;
+     }
+     .divs_right{
+      width: 40%;
+      margin-top: 30px;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      }
+      .widthin{
+        background: #1A1A1A;
+        width: 450px;
+      height: 337px;
+      border-radius: 5px 0px 0px 0px;
+      padding-top: 10px;
+      padding-left: 5px;
+      padding-right: 5px;
+      border-radius: 8px;
+      align-items: start;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 0px;
+      top: 0px;
+      left: 35px;
+       z-index: 1000;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      }
   }
 
   @media(max-width:850px) {
@@ -802,7 +897,27 @@ border: 1px 0px 0px 0px;
         width: 10px;
       }
   }
-  
+  @media(max-width:786px) {
+    .widthin{
+      background: #1A1A1A;
+      width: 350px;
+    height: 337px;
+    border-radius: 5px 0px 0px 0px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 15px;
+    border-radius: 8px;
+    align-items: start;
+    flex-direction: column;
+    flex-wrap: wrap;
+     
+    left: 35px;
+     z-index: 1000;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    }
+  }
 
   @media(max-width:750px) {
     .footer_down{
@@ -854,6 +969,28 @@ border: 1px 0px 0px 0px;
 
 
   @media(max-width:692px) {
+    .texts_head{
+      text-align: center;
+      width: 400px;
+      /* margin-left: 165px; */
+      padding-bottom: 5px;
+    }
+    .contacts_btw{
+      width: 100%;
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+       
+      }
+    .contact{
+      position: absolute;
+      top: 0px;
+      left: 0px;  
+      width: 100%;
+      height: 100vh;
+    }
     .tradingview{
       width: 100%;
       font-size: 10px;
@@ -864,7 +1001,8 @@ border: 1px 0px 0px 0px;
       height: 100%;
      } 
     .widths,
-    .widthed{
+    .widthed,
+    .widthin{
       width: 100%;
       height: 100%;
            padding-top: 10px;
@@ -909,7 +1047,7 @@ border: 1px 0px 0px 0px;
        } 
        .navbar{
         width: 100%;
-        height: 115vh;
+        height: 125vh;
         left: 0;
         top: 0;
        }
