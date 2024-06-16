@@ -9,9 +9,9 @@ const TradingViewWidget = () => {
     script.async = true;
     script.innerHTML = JSON.stringify({
       "autosize": true,
-      "symbol": "NASDAQ:AAPL",
-      "interval": "D",
-      "timezone": "Etc/UTC",
+      // "symbol": "NASDAQ:AAPL",
+       "interval": "D",
+       "timezone": "Etc/UTC",
       "theme": "dark",
       "backgroundColor": "#191919",
       "style": "1",
@@ -22,7 +22,7 @@ const TradingViewWidget = () => {
       "save_image": false,
       "calendar": false,
       "hide_volume": true,
-      "support_host": "https://www.tradingview.com"
+      // "support_host": "https://www.tradingview.com"
     });
 
     containerRef.current.appendChild(script);
@@ -33,8 +33,8 @@ const TradingViewWidget = () => {
   }, []);
 
   return (
-    <div className="tradingview-widget-container" style={{ height: '100%', width: '100%' }}>
-      <div className="tradingview-widget-container__widget" style={{ height: 'calc(100% - 32px)', width: '100%' }} ref={containerRef}></div>
+    <div className="tradingview-widget-container" >
+      <div className="tradingview" ref={containerRef}></div>
        
     </div>
   );
