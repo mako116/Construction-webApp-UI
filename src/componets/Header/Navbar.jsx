@@ -1,108 +1,73 @@
-import React from 'react'
-import candle from "../../assests/candle.svg"
-import rating from "../../assests/rating.svg"
-import together from "../../assests/together.svg"
-import minusndplus from "../../assests/minusndplus.svg"
-import dollar from "../../assests/dollar.svg"
-import CalendarCheck from "../../assests/CalendarCheck.svg"
-import tab from "../../assests/tab.svg"
-import ArrowsOut from "../../assests/ArrowsOut.svg"
-import Camera from "../../assests/Camera.svg"
+import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { AiTwotoneSetting } from "react-icons/ai";
 
+export const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef(null);
 
- export const Navbar = () => {
   const navs = [
-    {
-      name:"M1",
-    },
-    {
-      name:"M5",
-    },
-    {
-      name:"M15",
-    },
-    {
-      name:"M30",
-    },
-    {
-      name:"H1",
-    },
-    {
-      name:"H4",
-    },
-    {
-      name:"D1",
-    },
-    {
-      name:"W1",
-    },
-    {
-      name:"MN",
-    },
-    {
-      img:candle,
-    },
-    {
-      img:rating,
-    },
-    {
-      img:together,
-    },
-    {
-      img:minusndplus,
-    },
-    {
-      img:dollar,
-    },
-    {
-      img:CalendarCheck,
-    },
-    {
-      img:tab,
-    },
-    {
-      imgs:ArrowsOut,
-    },
-    {
-      imgs:Camera,
-    },
-    
-  ]
+    { name: "Home", path: "/" },
+    { name: "About", path: "#about" },
+    { name: "Services", path: "#services" },
+    { name: "Projects", path: "#projects" },
+  ];
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [navRef]);
+
   return (
-    <>
-    <div className="border-b-[2px] border-[#212121] w-full bg-[#191919] text-[#C7C7C7]">
-        <div className="px-[60px] flex py-[11px]">
-          <div className="w-full flex ">
-            {navs.map((items,index)=>(
-              <div className="display_nonedesk flex justify-between ">
-              <div className="header_img w-full gap-[10px] border-l border-r-[1px] border-[#212121] py-[7px] px-[5px] lg:px-[10px] flex justify-around " key={index}>
-                <span className='font-[400] text-[6px] lg:text-[11px] leading-[13.86px] '>{items.name}</span>
-                <img src={items.img} alt="" className='' />
-              
-                
-              </div>
-              </div>
-            ))}
-            <div className="flex gap-[5px]  w-full text-[12px] display_nonemobiles">
-           <div className=" flex gap-[5px] justify-around w-full text-[12px]">
-           <span>h1</span>
-            <img src={candle} alt="" />
-            <img src={rating} alt="" />
-            <img src={together} alt="" />
-            <img src={minusndplus} alt="" />
-            <img src={dollar} alt="" />
-           </div>
-           </div>
+    <header className={`py-3 transition-colors duration-300 ${isOpen ? 'bg-white' : 'bg-transparent'}`}>
+      <div className="flex items-center justify-between mx-auto px-4" ref={navRef}>
+        {!isOpen && (
+          <div className='flex'>
+            <AiTwotoneSetting className={`text-[30px] lg:text-[55px] ${isOpen ? 'text-black' : 'text-[#f37443]'}`} />
+            <Link to="/" className={`flex flex-col fonts_sora ${isOpen ? 'text-black' : 'text-white'}`}>
+              <span className='text-[10px] lg:text-[28px] tracking-[4px] font-bold leading-[15px] lg:leading-[20px]'>Cenjo </span>
+              <span className='text-[10px] lg:text-[25px] tracking-[1px] font-[200] leading-[15px] lg:leading-[30px]'>Engineering</span>
+            </Link>
           </div>
-         
-          <div className="  display_nonedesk">
-           <div className="pt-[10px] flex gap-[20px] items-center justify-center">
-           <img src={ArrowsOut} alt="" />
-           <img src={Camera} alt="" />
-           </div>
-          </div>
+        )}
+        <div className="md:hidden relative">
+          <button
+            className="text-black focus:outline-none px-[20px]"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            <svg className="w-6 h-6 absolute top-0 right-0" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              {isOpen ? (
+                <path stroke="black" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path stroke=" white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+              )}
+            </svg>
+          </button>
         </div>
-    </div>
-    </>
-  )
-}
+        <nav className={`md:flex space-x-0 lg:space-x-10 items-center ${isOpen ? "block bg-white" : "hidden"} md:block`}>
+          <ul className="flex py-[5px] flex-col md:flex-row md:space-x-10 space-y-4 md:space-y-0 fonts_monst">
+            {navs.map((nav, index) => (
+              <li key={index}>
+                <a href={nav.path} className={`transition-colors duration-300 py-[12px] rounded  hover:text-[#f37443] text-[#fff] hover:bg-[#fff] px-[8px] font-[500] text-[14px] lg:text-[20px] ${isOpen ? 'text-black' : 'text-white'}`}>{nav.name}</a>
+              </li>
+            ))}
+          </ul>
+          <a href="#contact" className="font-sora text-[15px] font-bold">
+            <button className={`w-[112px] h-full p-[10px] rounded transition-colors duration-300 bg-[#f37443]  hover:text-[#f37443] text-[#fff] hover:bg-[#fff]`}>
+              Contact Us
+            </button>
+          </a>
+        </nav>
+      </div>
+    </header>
+  );
+};

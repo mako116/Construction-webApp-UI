@@ -1,14 +1,22 @@
 import React from 'react'
-import { Navbar } from '../componets/Header/Navbar'
-import { HomePage } from '../componets/Homesection/HomePage'
+ import { HomePage } from '../componets/Homesection/HomePage'
 import { Footer } from '../componets/Footer/Footer'
-
-export const Layout = () => {
+import "../componets/styles/styles.css"
+import { Services } from '../componets/services'
+import { About } from '../componets/About/About'
+import CounterSection from '../componets/Countdown'
+import Projects from '../componets/Projects/Project'
+import Contact from '../componets/contact/Contactus'
+ export const Layout = () => {
   return (
     <>
-    <Navbar/>
-    <HomePage/>
-    {/* <Footer/> */}
+     <HomePage/>
+     <Services/>
+     <CounterSection/>
+     <About/>
+     <Projects/>
+     <Contact/>
+     <Footer/>
     </>
   )
 }

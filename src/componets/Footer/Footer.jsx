@@ -1,78 +1,39 @@
 import React from 'react'
-import { Fill } from '../../assests/Fill 1'
-import { Tab } from '../../assests/mobile_footer/tab'
-import { TabBartab } from '../../assests/mobile_footer/_TabBar-tab'
-import { Stack } from '../../assests/mobile_footer/Stack'
-import { ClockClockwise } from '../../assests/mobile_footer/ClockClockwise'
-import { Settigs } from '../../assests/mobile_footer/settigs'
-
+import { AiTwotoneSetting } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
+ 
 export const Footer = () => {
-    const balance = [
-        {
-            Balance:"Balance: 100,000.00"
-        },
-        {
-            Balance:"Equity: 100,000.00"
-        },
-        {
-            Balance:"Margin:0.00"
-        },
-        {
-            Balance:"Free Margin:0.00"
-        },
-        {
-            Balance:"Level:0.00%"
-        },
-    ]
+    
   return (
-    <>
-    <div className=" font-sora bg-[#191919]">
-        <div className="w-full  h-full py-[1px]">
-        <div className="bg-[#201F1F] display_nonedesk">
-            <div className="w-full border-t border-b  border-[#1E1E1E] footer_up justify-around bg-[#191919] text-[#B4B4B4] font-[400] ">
-                <span>Symbol</span>
-                <span>Ticket</span>
-                <span>Time</span>
-                <span>Volume</span>
-                <span>Price</span>
-                <span>S/L</span>
-                <span>T/P</span>
-                <span>Price</span>
-                <span>Swap</span>
-                <span>Profit</span>
-            </div>
-            <div className="footer_down">
-                {balance.map((items,index)=>(
-                    <div key={index} className="text-[#B4B4B4] footer_down2 ">
-                        <span className=''>{items.Balance}</span>
-                    </div>
-                ))}
-                 <div className="text-[#B4B4B4] footer_down3">
-                <span>0.00</span>
-                <span>USD</span>
-            </div>
-            </div>
-           
+    <footer className="bg-[#000]  text-white py-[50px] w-full h-full">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="mb-6 md:mb-0">
+          <div className='flex'>
+            <AiTwotoneSetting className={`text-[30px] lg:text-[55px] text-[#f37443]`} />
+            <Link to="/" className={`flex flex-col fonts_sora`}>
+              <span className='text-[10px] lg:text-[28px] tracking-[4px] font-bold leading-[15px] lg:leading-[20px]'>Cenjo </span>
+              <span className='text-[10px] lg:text-[25px] tracking-[1px] font-[200] leading-[15px] lg:leading-[30px]'>Engineering</span>
+            </Link>
+          </div>
+            <p className="text-sm">Innovative Engineering Solutions</p>
+          </div>
+          <nav className="flex space-x-4 flex-wrap items-center justify-center">
+             <a href="#about" className="hover:text-[#f37443] transition duration-300">About</a>
+            <a href="#services" className="hover:text-[#f37443] transition duration-300">Services</a>
+            <a href="#projects" className="hover:text-[#f37443] transition duration-300">Projects</a>
+            <a href="#contact" className="hover:text-[#f37443] transition duration-300">Contact</a>
+          </nav>
         </div>
-        <div className="h-[30vh] pt-[20px] display_nonedesk  flex-col flex items-center justify-center text-center">
-            <div className=" flex flex-col items-center gap-[5px] pb-[12px]">
-                 <Fill/>
-                 <h4 className=' text-[#B4B4B4] font-[400] text-[13px] '>You don't have any positions</h4>
-                <button className='footerbg'>Create New Order</button>
-            </div>
-         </div>
-         <div className="flex justify-end border-t border-[#DBDBDB]  display_nonemobile">
-            <ul className='flex  items-center justify-around'>
-                <li><Tab/></li>
-                <li><TabBartab/></li>
-                <li><Stack/></li>
-                <li><ClockClockwise/></li>
-                <li><Settigs/></li>
-            </ul>
+        <div className="flex flex-col md:flex-row justify-between items-center mt-7">
+          <p className="text-sm"><span className='text-[#f37443]'> &copy; 2024 </span>  Cenjo Enginnering. All rights reserved.</p>
+          <div className="flex space-x-4 mt-4 md:mt-0">
+            <Link to="/" className="hover:text-[#f37443] transition duration-300">Facebook</Link>
+            <Link to="/" className="hover:text-[#f37443] transition duration-300">Twitter</Link>
+            <Link to="/" className="hover:text-[#f37443] transition duration-300">LinkedIn</Link>
+          </div>
         </div>
-        </div>
-
-    </div>
-    </>
+      </div>
+    </footer>
   )
 }
